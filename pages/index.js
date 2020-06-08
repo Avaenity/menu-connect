@@ -1,8 +1,10 @@
 import Nav from '../components/nav'
+import Burger from '../components/Burger/Burger'
 
 export default function IndexPage() {
   return (
     <div>
+      <Burger />
       <Nav />
       <div className="hero">
         <h1 className="title">Next.js + Tailwind CSS</h1>
