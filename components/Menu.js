@@ -10,7 +10,7 @@ const Menu = ({ setOpen, open }) => {
                 .close {
                     position: absolute;
                     right: 2rem;
-                    top: 1.70rem;
+                    top: 2rem;
                     width: 20px;
                     height: 20px;
                 }
