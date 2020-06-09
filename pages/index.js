@@ -1,10 +1,11 @@
+import { func,bool } from 'prop-types';
 import Menu from '../components/Menu';
 import Nav from '../components/Nav';
-import React, { useState } from 'react';
 
-export default function IndexPage() {
+
+export default function IndexPage({ setOpen, open }) {
   
-  const [open, setOpen] = useState(false);
+  
 
   return (
     <div>
@@ -28,3 +29,8 @@ export default function IndexPage() {
     </div>
   )
 }
+
+IndexPage.propTypes = {
+  open: bool.isRequired,
+  setOpen: func.isRequired,
+};
