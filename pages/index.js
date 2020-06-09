@@ -11,8 +11,14 @@ export default function IndexPage() {
       <Menu open={open} setOpen={setOpen}/>
       <Nav open={open} setOpen={setOpen}/>
       <div className="hero">
-        <h1 className="title">Next.js + Tailwind CSS</h1>
+        <h1 className="title">Bienvenue sur MENU-CONNECT</h1>
       </div>
+      <style jsx>{`
+        .hero {
+          transition: filter 0.5s ease-in-out;
+          filter: blur(${open ? "10px" : "0"});
+        }
+      `}</style>
     </div>
   )
 }

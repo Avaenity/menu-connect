@@ -15,7 +15,7 @@ const Burger = ({ open, setOpen }) => {
                     display: flex;
                     flex-direction: column;
                     justify-content: space-around;
-                    width: 2rem;
+                    width: 1.8rem;
                     height: 1.5rem;
                     background: transparent;
                     border: none;
@@ -25,13 +25,14 @@ const Burger = ({ open, setOpen }) => {
                 }
                     
                 .burger:focus {
+                    outline: 0;
                     outline: none;
                 }
                     
                 .burger div {
-                    width: 2rem;
+                    width: 1.8rem;
                     height: 0.25rem;
-                    background: black;
+                    background: #B5B5B5;
                     border-radius: 10px;
                     transition: all 0.3s linear;
                     position: relative;

@@ -1,45 +1,47 @@
-import { bool } from 'prop-types';
+import { func,bool } from 'prop-types';
 
-const Menu = ({ open }) => {
+const Menu = ({ setOpen, open }) => {
     return (
         <div className="menu">
-            <a href="/">
-                <span role="img" aria-label="about us">&#x1f481;&#x1f3fb;&#x200d;&#x2642;&#xfe0f;</span>
-                About us
-            </a>
-            <a href="/">
-                <span role="img" aria-label="price">&#x1f4b8;</span>
-                Pricing
-            </a>
-            <a href="/">
-                <span role="img" aria-label="contact">&#x1f4e9;</span>
-                Contact
-            </a>
-
+            <div className="flex flex-col justify-center relative">
+                <a href="#" className="close" open={open} onClick={() => setOpen(!open)}></a>
+            </div>
             <style jsx>{`
+                .close {
+                    position: absolute;
+                    right: 2rem;
+                    top: 1.70rem;
+                    width: 20px;
+                    height: 20px;
+                }
+                .close:before, .close:after {
+                    position: absolute;
+                    left: 15px;
+                    content: ' ';
+                    height: 24px;
+                    width: 3px;
+                    border-radius: 20px;
+                    background-color: #B5B5B5;
+                }
+                .close:before {
+                    transform: rotate(45deg);
+                }
+                .close:after {
+                    transform: rotate(-45deg);
+                }
+
                 .menu {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    background: blue;
+                    background: white;
                     height: 100vh;
+                    width: 80vw;
                     text-align: left;
-                    padding: 2rem;
                     position: absolute;
                     top: 0;
                     left: 0;
-                    transition: transform 0.3s ease-in-out;
+                    z-index: 11;
+                    transition: transform 0.5s ease-in-out, box-shadow 1s linear;
+                    box-shadow: ${open ? '1px 0px 15px grey' : 0};
                     transform: ${ open ? 'translateX(0)' : 'translateX(-100%)'};
-                }
-                .menu a {
-                    font-size: 2rem;
-                    text-transform: uppercase;
-                    padding: 2rem 0;
-                    font-weight: bold;
-                    letter-spacing: 0.5rem;
-                    color:white;
-                    text-decoration: none;
-                    transition: color 0.3s linear;
                 }
             `}</style>
         </div>
@@ -48,6 +50,7 @@ const Menu = ({ open }) => {
 
 Menu.propTypes = {
     open: bool.isRequired,
+    setOpen: func.isRequired,
 };
 
 export default Menu;
