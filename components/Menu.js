@@ -40,7 +40,7 @@ const Menu = ({ setOpen, open }) => {
                     left: 0;
                     z-index: 11;
                     transition: transform 0.5s ease-in-out, box-shadow 1s linear;
-                    box-shadow: ${open ? '1px 0px 15px grey' : 0};
+                    box-shadow: ${open ? '1px 0px 15px rgba(181,181,181,0.6)' : 0};
                     transform: ${ open ? 'translateX(0)' : 'translateX(-100%)'};
                 }
             `}</style>
