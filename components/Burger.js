@@ -1,8 +1,8 @@
 import { bool, func } from 'prop-types';
 
-const Burger = ({ open, setOpen }) => {
+const Burger = ({ menuOpen, setMenuOpen }) => {
     return (
-        <div className="burger" open={open} onClick={() => setOpen(!open)}>
+        <div className="burger" open={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>
             <div />
             <div />
             <div />
@@ -44,8 +44,8 @@ const Burger = ({ open, setOpen }) => {
 }
 
 Burger.propTypes = {
-    open: bool.isRequired,
-    setOpen: func.isRequired,
+    menuOpen: bool.isRequired,
+    setMenuOpen: func.isRequired,
 };
 
 export default Burger;

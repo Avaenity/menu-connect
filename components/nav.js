@@ -3,11 +3,11 @@ import Burger from './Burger'
 import Search from '../public/svg/search.svg'
 
 
-export default function Nav({ open, setOpen }) {
+export default function Nav({ menuOpen, setMenuOpen }) {
 
   return (
     <nav>
-      <Burger open={open} setOpen={setOpen}/>
+      <Burger menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
       <div className="search">
       <Search fill="#B5B5B5"/>
       </div>
@@ -22,7 +22,8 @@ export default function Nav({ open, setOpen }) {
             padding: 0;
             z-index: 10;
             transition: filter 0.5s ease-in-out;
-            filter: blur(${open ? "10px" : "0"});
+            filter: blur(${menuOpen ? "10px" : "0"});
+            //TODO put prevent default on click on search if open is true
         }
             
         .search:focus {

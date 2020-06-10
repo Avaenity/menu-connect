@@ -3,21 +3,21 @@ import Menu from '../components/Menu';
 import Nav from '../components/Nav';
 
 
-export default function IndexPage({ setOpen, open }) {
+export default function IndexPage({ setMenuOpen, menuOpen }) {
   
   
 
   return (
     <div>
-      <Menu open={open} setOpen={setOpen}/>
-      <Nav open={open} setOpen={setOpen}/>
+      <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
+      <Nav menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
       <div className="hero">
         <h1 className="title text-xl">Bienvenue sur MENU-CONNECT</h1>
       </div>
       <style jsx>{`
         .hero {
           transition: filter 0.5s ease-in-out;
-          filter: blur(${open ? "10px" : "0"});
+          filter: blur(${menuOpen ? "10px" : "0"});
         }
       `}</style>
       <style jsx global>{`
@@ -31,6 +31,6 @@ export default function IndexPage({ setOpen, open }) {
 }
 
 IndexPage.propTypes = {
-  open: bool.isRequired,
-  setOpen: func.isRequired,
+  menuOpen: bool.isRequired,
+  setMenuOpen: func.isRequired,
 };

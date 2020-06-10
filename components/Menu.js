@@ -1,10 +1,10 @@
 import { func,bool } from 'prop-types';
 
-const Menu = ({ setOpen, open }) => {
+const Menu = ({ setMenuOpen, menuOpen }) => {
     return (
-        <div className="menu">
+        <div className="menu"  open={menuOpen}>
             <div className="flex flex-col justify-center relative">
-                <a href="#" className="close" open={open} onClick={() => setOpen(!open)}></a>
+                <a className="close" open={menuOpen} onClick={() => setMenuOpen(!menuOpen)}></a>
             </div>
             <style jsx>{`
                 .close {
@@ -40,8 +40,8 @@ const Menu = ({ setOpen, open }) => {
                     left: 0;
                     z-index: 11;
                     transition: transform 0.5s ease-in-out, box-shadow 1s linear;
-                    box-shadow: ${open ? '1px 0px 15px rgba(181,181,181,0.6)' : 0};
-                    transform: ${ open ? 'translateX(0)' : 'translateX(-100%)'};
+                    box-shadow: ${menuOpen ? '1px 0px 15px rgba(181,181,181,0.6)' : 0};
+                    transform: ${menuOpen ? 'translateX(0)' : 'translateX(-100%)'};
                 }
             `}</style>
         </div>
@@ -49,8 +49,8 @@ const Menu = ({ setOpen, open }) => {
 }
 
 Menu.propTypes = {
-    open: bool.isRequired,
-    setOpen: func.isRequired,
+    menuOpen: bool.isRequired,
+    setMenuOpen: func.isRequired,
 };
 
 export default Menu;

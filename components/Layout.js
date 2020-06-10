@@ -1,15 +1,17 @@
-import { func,bool } from 'prop-types';
-import Tapbar from './Tapbar'
+import { string,bool,func } from 'prop-types';
+import TabNav from './TabNav'
 
 export default function Layout(props) {
 
     return (
         <div className="Layout" >
             {props.children}
-            <Tapbar open={props.open}/>
+            <TabNav menuOpen={props.menuOpen} tabActive={props.tabActive} setTabActive={props.setTabActive}/>
         </div>
     )
 }
 Layout.propTypes = {
-    open: bool.isRequired
+    menuOpen: bool.isRequired,
+    tabActive: string.isRequired,
+    setTabActive: func.isRequired
 };
