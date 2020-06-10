@@ -14,18 +14,24 @@ export default function TabNav({ menuOpen, tabActive, setTabActive }) {
 
     return (
         <div className="tapbar w-full absolute bottom-0 flex flex-row justify-around h-24 bg-white">
-            <a className={`svg relative flex flex-col justify-center ${isActive('place') ? "active" : ""}`} data-name="place" onClick={(e) => setTabActive(e.currentTarget.dataset.name)}>
-            {/* TODO find a way to pass data-name in isActive() */}
-                <Place fill={`${isActive('place') ? "#247BA0" : "#B5B5B5"}`} width={`${isActive('place') ? "2.5rem" : "2rem"}`}/>
-            </a>
-            <a className={`svg relative flex flex-col justify-center ${isActive('home') ? "active" : ""}`} data-name="home" onClick={(e) => setTabActive(e.currentTarget.dataset.name)}>
-            {/* TODO find a way to pass data-name in isActive() */}
-                <Home fill={`${isActive('home') ? "#247BA0" : "#B5B5B5"}`} width={`${isActive('home') ? "2.5rem" : "2rem"}`}/>
-            </a>
-            <a className={`svg relative flex flex-col justify-center ${isActive('order') ? "active" : ""}`} data-name="order" onClick={(e) => setTabActive(e.currentTarget.dataset.name)}>
-            {/* TODO find a way to pass data-name in isActive() */}
-                <Order fill={`${isActive('order') ? "#247BA0" : "#B5B5B5"}`} width={`${isActive('order') ? "2rem" : "1.5rem"}`}/>
-            </a>
+            <Link href="/welcome">
+                <a className={`svg relative flex flex-col justify-center ${isActive('place') ? "active" : ""}`} data-name="place" onClick={(e) => setTabActive(e.currentTarget.dataset.name)}>
+                {/* TODO find a way to pass data-name in isActive() */}
+                    <Place fill={`${isActive('place') ? "#247BA0" : "#B5B5B5"}`} width={`${isActive('place') ? "2.5rem" : "2rem"}`}/>
+                </a>
+            </Link>
+            <Link href="/">
+                <a className={`svg relative flex flex-col justify-center ${isActive('home') ? "active" : ""}`} data-name="home" onClick={(e) => setTabActive(e.currentTarget.dataset.name)}>
+                {/* TODO find a way to pass data-name in isActive() */}
+                    <Home fill={`${isActive('home') ? "#247BA0" : "#B5B5B5"}`} width={`${isActive('home') ? "2.5rem" : "2rem"}`}/>
+                </a>
+            </Link>
+            <Link href="/order">
+                <a className={`svg relative flex flex-col justify-center ${isActive('order') ? "active" : ""}`} data-name="order" onClick={(e) => setTabActive(e.currentTarget.dataset.name)}>
+                {/* TODO find a way to pass data-name in isActive() */}
+                    <Order fill={`${isActive('order') ? "#247BA0" : "#B5B5B5"}`} width={`${isActive('order') ? "2rem" : "1.5rem"}`}/>
+                </a>
+            </Link>
 
             <style jsx>{`
                 .tapbar{
