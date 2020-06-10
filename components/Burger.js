@@ -15,8 +15,8 @@ const Burger = ({ menuOpen, setMenuOpen }) => {
                     display: flex;
                     flex-direction: column;
                     justify-content: space-around;
-                    width: 1.8rem;
-                    height: 1.5rem;
+                    width: 1.5rem;
+                    height: 1.3rem;
                     background: transparent;
                     border: none;
                     cursor: pointer;
@@ -30,9 +30,9 @@ const Burger = ({ menuOpen, setMenuOpen }) => {
                 }
                     
                 .burger div {
-                    width: 1.8rem;
-                    height: 0.25rem;
-                    background: #B5B5B5;
+                    width: 1.5rem;
+                    height: 0.2rem;
+                    background: white;
                     border-radius: 10px;
                     transition: all 0.3s linear;
                     position: relative;
