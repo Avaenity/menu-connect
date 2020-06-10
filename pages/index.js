@@ -1,6 +1,4 @@
 import { func,bool } from 'prop-types';
-import Menu from '../components/Menu';
-import Nav from '../components/Nav';
 
 
 export default function IndexPage({ setMenuOpen, menuOpen }) {
@@ -9,8 +7,6 @@ export default function IndexPage({ setMenuOpen, menuOpen }) {
 
   return (
     <div>
-      <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
-      <Nav menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
       <div className="hero">
         <h1 className="title text-xl">Bienvenue sur MENU-CONNECT</h1>
       </div>

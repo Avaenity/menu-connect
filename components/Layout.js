@@ -1,10 +1,14 @@
 import { string,bool,func } from 'prop-types';
-import TabNav from './TabNav'
+import TabNav from './TabNav';
+import Nav from '../components/Nav';
+import Menu from '../components/Menu';
 
 export default function Layout(props) {
 
     return (
         <div className="Layout" >
+            <Nav menuOpen={props.menuOpen} setMenuOpen={props.setMenuOpen}/>
+            <Menu menuOpen={props.menuOpen} setMenuOpen={props.setMenuOpen}/>
             {props.children}
             <TabNav menuOpen={props.menuOpen} tabActive={props.tabActive} setTabActive={props.setTabActive}/>
         </div>
