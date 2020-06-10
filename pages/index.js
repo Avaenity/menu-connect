@@ -16,12 +16,6 @@ export default function IndexPage({ setMenuOpen, menuOpen }) {
           filter: blur(${menuOpen ? "10px" : "0"});
         }
       `}</style>
-      <style jsx global>{`
-        html {
-          background: linear-gradient(#FFFFFF, #F7F7F7);
-          height: 100vh;
-        }
-      `}</style>
     </div>
   )
 }

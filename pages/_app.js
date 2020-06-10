@@ -10,6 +10,12 @@ function MyApp({ Component, pageProps }) {
   return (
     <Layout menuOpen={menuOpen} setMenuOpen={setMenuOpen} tabActive={tabActive} setTabActive={setTabActive}>
       <Component {...pageProps} menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
+      <style jsx global>{`
+        html {
+          background: linear-gradient(#FFFFFF, #F7F7F7);
+          height: 100vh;
+        }
+      `}</style>
     </Layout>
   )
 }
