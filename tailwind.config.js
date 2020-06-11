@@ -1,7 +1,7 @@
 module.exports = {
-  purge: ['./components/**/*.js', './pages/**/*.js'],
-  theme: {
-    fontFamily: {
+	purge: ['./components/**/*.js', './pages/**/*.js'],
+	theme: {
+		fontFamily: {
 			sans: [
 				'Open Sans',
 				'sans-serif',
@@ -11,8 +11,8 @@ module.exports = {
 				'"Noto Color Emoji"'
 			],
 		},
-    extend: {},
-  },
-  variants: {},
-  plugins: [],
+		extend: {},
+	},
+	variants: {},
+	plugins: [],
 }

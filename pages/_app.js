@@ -15,6 +15,9 @@ function MyApp({ Component, pageProps }) {
           background: linear-gradient(#FFFFFF, #F7F7F7);
           height: 100vh;
         }
+        p, li {
+          font-size: 1.125rem;
+        }
       `}</style>
     </Layout>
   )
