@@ -14,9 +14,15 @@ function MyApp({ Component, pageProps }) {
         html {
           background: linear-gradient(#FFFFFF, #F7F7F7);
           height: 100vh;
+          color: #484848;
         }
         p, li {
           font-size: 1.125rem;
+        }
+        .hero{
+          height: 100vh;
+          padding-bottom: 6rem;
+          overflow: scroll;
         }
       `}</style>
     </Layout>

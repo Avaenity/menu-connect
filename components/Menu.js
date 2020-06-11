@@ -1,4 +1,7 @@
 import { func,bool } from 'prop-types';
+import Instagram from '../public/svg/instagram.svg';
+import TA from '../public/svg/tripadvisor.svg';
+import MenuConnect from '../public/svg/menu-connect.svg'
 
 const Menu = ({ setMenuOpen, menuOpen }) => {
     return (
@@ -29,15 +32,15 @@ const Menu = ({ setMenuOpen, menuOpen }) => {
                         <li className="uppercase">événements</li>
                     </ul>
                 </div>
-                <div className="menu-footer flex flex-row pl-8 pb-4">
+                <div className="menu-footer flex flex-row justify-between pl-8 pb-4">
                     <div className="social">
-                        <ul className="flex flex-row">
-                            <li>Facebook</li>
-                            <li>Pinterest</li>
-                        </ul>
+                        <div className="flex flex-row">
+                            <a className="mr-4" href="/"><Instagram width="30px"/></a>
+                            <a className="mr-2" href="/"><TA width="30px" fill="red"/></a>
+                        </div>
                     </div>
-                    <div className="menu-connect">
-                        <a href="/">Menu Connect</a>
+                    <div className="menu-connect mr-8">
+                        <a href="/"><MenuConnect width="60px"/></a>
                     </div>
                 </div>
             </div>
