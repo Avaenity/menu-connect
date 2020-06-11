@@ -2,15 +2,50 @@ import { func,bool } from 'prop-types';
 
 const Menu = ({ setMenuOpen, menuOpen }) => {
     return (
-        <div className="menu"  open={menuOpen}>
-            <div className="flex flex-col justify-center relative">
-                <a className="close" open={menuOpen} onClick={() => setMenuOpen(!menuOpen)}></a>
+        <div className="menu flex relative overflow-scroll"  open={menuOpen}>
+            <a className="close" open={menuOpen} onClick={() => setMenuOpen(!menuOpen)}></a>
+            <div className="flex flex-col flex-1">
+                <div className="menu-container flex flex-col justify-evenly flex-grow pl-8">
+                    <ul>
+                        <li className="uppercase">formules</li>
+                        <li className="uppercase">entrées</li>
+                        <li className="uppercase">plats</li>
+                        <li className="uppercase">desserts</li>
+                    </ul>
+                    <ul>
+                        <li className="uppercase">salades</li>
+                        <li className="uppercase">fromages</li>
+                    </ul>
+                    <ul>
+                        <li className="uppercase">Boissons</li>
+                        <li className="uppercase">Carte des vins</li>
+                    </ul>
+                    <ul>
+                        <li className="uppercase">service en chambre</li>
+                    </ul>
+                    <ul>
+                        <li className="uppercase">Visites virtuelles</li>
+                        <li className="uppercase">le patio ?</li>
+                        <li className="uppercase">événements</li>
+                    </ul>
+                </div>
+                <div className="menu-footer flex flex-row pl-8 pb-4">
+                    <div className="social">
+                        <ul className="flex flex-row">
+                            <li>Facebook</li>
+                            <li>Pinterest</li>
+                        </ul>
+                    </div>
+                    <div className="menu-connect">
+                        <a href="/">Menu Connect</a>
+                    </div>
+                </div>
             </div>
             <style jsx>{`
                 .close {
                     position: absolute;
-                    right: 2rem;
-                    top: 2rem;
+                    right: 1.5rem;
+                    top: 0.8rem;
                     width: 20px;
                     height: 20px;
                 }
