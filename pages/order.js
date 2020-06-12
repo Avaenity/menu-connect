@@ -33,8 +33,6 @@ export default function Order() {
           <p className="text-center text-sm text-gray-500 mt-2 leading-snug"><span className="font-semibold">Gardons le contact</span><br/>Pour passer commande, faites appel à votre serveur!</p>
         </div>
       </div>
-      <style jsx>{`
-      `}</style>
     </div>
   )
 }
