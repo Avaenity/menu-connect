@@ -27,9 +27,10 @@ export default function Order() {
           <CardOrder />
           <CardOrder />
         </div>
-        <div className="order-summary">
+        <div className="order-summary mb-8">
           <h2 className="text-xl font-semibold text-center">Total</h2>
           <div className="text-center"><span className="price text-3xl font-semibold">40,50</span><sup className="currency text-base font-semibold">€</sup></div>
+          <p className="text-center text-sm text-gray-500 mt-2 leading-snug"><span className="font-semibold">Gardons le contact</span><br/>Pour passer commande, faites appel à votre serveur!</p>
         </div>
       </div>
       <style jsx>{`

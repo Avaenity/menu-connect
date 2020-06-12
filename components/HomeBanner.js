@@ -18,7 +18,7 @@ export default function HomeBanner() {
                 top:0;
                 left:1;
                 z-index: 0;
-                background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C */
+                background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
             }
         `}</style>
         </div>
