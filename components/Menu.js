@@ -35,13 +35,25 @@ const Menu = ({ setMenuOpen, menuOpen }) => {
             <div className="flex flex-col flex-1">
                 <div className="menu-container flex flex-col justify-center flex-grow pl-8">
                     {
-                        categories.map((el, index) => (
-                            <ul className="categories mb-10 relative" key={index}>
-                                {el.map((e, index) => (
-                                    <Link href="/[category]" as={`/${e}`} key={index}><li className="uppercase mb-4" onClick={() => setMenuOpen(!menuOpen)}>{e}</li></Link>
-                                ))}
-                            </ul>
-                        ))
+                        <ul className="categories mb-10 relative">
+                            {categories[0].map((e, index) => (
+                                <Link href="[category]" as={`/${e}`} key={index}><li className="uppercase mb-4" onClick={() => setMenuOpen(!menuOpen)}>{e}</li></Link>
+                            ))}
+                        </ul>
+                    }
+                    {
+                        <ul className="categories mb-10 relative">
+                            {categories[1].map((e, index) => (
+                                <Link href="/roomservice" key={index}><li className="uppercase mb-4" onClick={() => setMenuOpen(!menuOpen)}>{e}</li></Link>
+                            ))}
+                        </ul>
+                    }
+                    {
+                        <ul className="categories mb-10 relative">
+                            {categories[2].map((e, index) => (
+                                <Link href="/event" key={index}><li className="uppercase mb-4" onClick={() => setMenuOpen(!menuOpen)}>{e}</li></Link>
+                            ))}
+                        </ul>
                     }
                 </div>
                 <div className="menu-footer flex flex-row justify-between pl-8 pb-4">
