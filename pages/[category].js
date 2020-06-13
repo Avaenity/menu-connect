@@ -4,7 +4,6 @@ import { useRouter } from 'next/router'
 export default function Category (props) {
     const router = useRouter()
     const category = router.query["category"]
-    console.log(category)
 
     return (
         <div className="hero relative">
