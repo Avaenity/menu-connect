@@ -2,7 +2,7 @@ import Instagram from '../public/svg/Instagram.svg';
 import TA from '../public/svg/TA.svg';
 import Twitter from '../public/svg/Twitter.svg';
 import Pinterest from '../public/svg/Pinterest.svg';
-import Facebook from '../public/svg/Facebook.svg';
+import Facebook from '../components/svg/Facebook';
 import MenuConnect from '../public/svg/menu-connect.svg';
 import Link from 'next/link';
 
