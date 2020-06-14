@@ -1,6 +1,4 @@
-import * as React from "react";
-
-function SvgFacebook(props) {
+export default function SvgFacebook(props) {
   return (
     <svg viewBox="0 0 512 512" width="1em" height="1em" {...props}>
       <path
