@@ -19,11 +19,6 @@ export default function Order() {
 					</ul>
 				</div>
 				<div className="order-content mt-4 flex flex-col">
-					<CardOrder />
-					<CardOrder />
-					<CardOrder />
-					<CardOrder />
-					<CardOrder />
 				</div>
 				<div className="order-summary mb-8">
 					<h2 className="text-xl font-semibold text-center">Total</h2>
