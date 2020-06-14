@@ -10,7 +10,7 @@ const Menu = (props) => {
 
     return (
         <div className="menu flex relative overflow-scroll"  open={props.menuOpen}>
-            <a className="close" open={props.menuOpen} onClick={() => props.setMenuOpen(!props.menuOpen)}></a>
+            <div className="close" open={props.menuOpen} onClick={() => props.setMenuOpen(!props.menuOpen)}></div>
             <div className="flex flex-col flex-1">
                 <div className="menu-container flex flex-col justify-center flex-grow pl-8">
                     {

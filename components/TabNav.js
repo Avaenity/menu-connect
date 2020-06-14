@@ -13,7 +13,7 @@ export default function TabNav({ menuOpen, tabActive, setTabActive }) {
     } 
 
     return (
-        <div className="tapbar w-full absolute bottom-0 flex flex-row justify-around h-16 bg-white">
+        <div className="tapbar w-full fixed bottom-0 flex flex-row justify-around h-24 bg-white">
             <Link href="/welcome">
                 <div className={`svg relative flex flex-col justify-center ${isActive('place') ? "active" : ""}`} data-name="place" onClick={(e) => setTabActive(e.currentTarget.dataset.name)}>
                 {/* TODO find a way to pass data-name in isActive() */}
