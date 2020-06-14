@@ -1,6 +1,6 @@
 import { string,bool,func } from 'prop-types';
 import TabNav from './TabNav';
-import Nav from '../components/Nav';
+import Nav from '../components/Navbar';
 import Menu from '../components/Menu';
 
 export default function Layout(props) {
