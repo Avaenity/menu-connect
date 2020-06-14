@@ -174,9 +174,6 @@
             "nom": "Café gourmand",
             "ingredients": "Café et 3 mini desserts",
             "prix": 7.5
-        },
-        {
-            "prix": 7.5
         }
     ],
     "*Boissons": [
