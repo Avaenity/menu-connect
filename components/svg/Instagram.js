@@ -1,6 +1,6 @@
 export default function Instagram (props) {
     return (
-        <svg viewBox="0 0 512 512" width="1em" height="1em" {...props}>
+        <svg viewBox="0 0 512 512" {...props}>
           <linearGradient
             id="Instagram_svg__a"
             gradientUnits="userSpaceOnUse"

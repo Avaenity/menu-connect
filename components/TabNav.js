@@ -13,24 +13,24 @@ export default function TabNav({ menuOpen, tabActive, setTabActive }) {
     } 
 
     return (
-        <div className="tapbar w-full absolute bottom-0 flex flex-row justify-around h-24 bg-white">
+        <div className="tapbar w-full absolute bottom-0 flex flex-row justify-around h-16 bg-white">
             <Link href="/welcome">
-                <a className={`svg relative flex flex-col justify-center ${isActive('place') ? "active" : ""}`} data-name="place" onClick={(e) => setTabActive(e.currentTarget.dataset.name)}>
+                <div className={`svg relative flex flex-col justify-center ${isActive('place') ? "active" : ""}`} data-name="place" onClick={(e) => setTabActive(e.currentTarget.dataset.name)}>
                 {/* TODO find a way to pass data-name in isActive() */}
-                    <Place fill={`${isActive('place') ? "#247BA0" : "#B5B5B5"}`} width={`${isActive('place') ? "2.5rem" : "2rem"}`}/>
-                </a>
+                    <Place fill={`${isActive('place') ? "#247BA0" : "#B5B5B5"}`} width={`${isActive('place') ? "35px" : "25px"}`}/>
+                </div>
             </Link>
             <Link href="/">
-                <a className={`svg relative flex flex-col justify-center ${isActive('home') ? "active" : ""}`} data-name="home" onClick={(e) => setTabActive(e.currentTarget.dataset.name)}>
+                <div className={`svg relative flex flex-col justify-center ${isActive('home') ? "active" : ""}`} data-name="home" onClick={(e) => setTabActive(e.currentTarget.dataset.name)}>
                 {/* TODO find a way to pass data-name in isActive() */}
-                    <Home fill={`${isActive('home') ? "#247BA0" : "#B5B5B5"}`} width={`${isActive('home') ? "2.5rem" : "2rem"}`}/>
-                </a>
+                    <Home fill={`${isActive('home') ? "#247BA0" : "#B5B5B5"}`} width={`${isActive('home') ? "35px" : "25px"}`}/>
+                </div>
             </Link>
             <Link href="/order">
-                <a className={`svg relative flex flex-col justify-center ${isActive('order') ? "active" : ""}`} data-name="order" onClick={(e) => setTabActive(e.currentTarget.dataset.name)}>
+                <div className={`svg relative flex flex-col justify-center ${isActive('order') ? "active" : ""}`} data-name="order" onClick={(e) => setTabActive(e.currentTarget.dataset.name)}>
                 {/* TODO find a way to pass data-name in isActive() */}
-                    <Order fill={`${isActive('order') ? "#247BA0" : "#B5B5B5"}`} width={`${isActive('order') ? "2rem" : "1.5rem"}`}/>
-                </a>
+                    <Order fill={`${isActive('order') ? "#247BA0" : "#B5B5B5"}`} width={`${isActive('order') ? "30px" : "20px"}`}/>
+                </div>
             </Link>
 
             <style jsx>{`

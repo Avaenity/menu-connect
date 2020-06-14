@@ -19,14 +19,8 @@ const Burger = ({ menuOpen, setMenuOpen }) => {
                     height: 1.3rem;
                     background: transparent;
                     border: none;
-                    cursor: pointer;
                     padding: 0;
                     z-index: 10;
-                }
-                    
-                .burger:focus {
-                    outline: 0;
-                    outline: none;
                 }
                     
                 .burger div {

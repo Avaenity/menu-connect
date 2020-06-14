@@ -18,7 +18,6 @@ export default function Nav({ menuOpen, setMenuOpen }) {
             right: 2rem;
             width: 1.3rem;
             height: 1.3rem;
-            cursor: pointer;
             padding: 0;
             z-index: 10;
             transition: filter 0.5s ease-in-out;

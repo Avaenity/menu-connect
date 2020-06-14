@@ -4,8 +4,6 @@ export default function MenuConnect (props) {
           id="menu-connect_svg__Calque_1"
           data-name="Calque 1"
           viewBox="0 0 94.31 52.51"
-          width="1em"
-          height="1em"
           {...props}
         >
           <defs>
