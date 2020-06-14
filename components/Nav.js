@@ -7,6 +7,8 @@ import { useRouter } from 'next/router'
 export default function Nav({ menuOpen, setMenuOpen }) {
 
   const router = useRouter()
+  
+  //Toggle class to change icon color
   const pageWhiteBg = ['/[category]', '/event', '/roomservice', '/welcome']
   const hasWhiteBg = pageWhiteBg.includes(router.pathname)
 
