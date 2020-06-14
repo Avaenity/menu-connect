@@ -42,7 +42,7 @@ const Menu = (props) => {
                                 Object.keys(props.infosRestaurant[0]).map(function(el, key) {
                                     switch (el){
                                         case "facebook":
-                                            return <a className="mr-4" href={props.infosRestaurant[0][el]} key={key}></a>;
+                                            return <a className="mr-4" href={props.infosRestaurant[0][el]} key={key}><Facebook width="30px"/></a>;
                                         case "pinterest":
                                             return <a className="mr-4" href={props.infosRestaurant[0][el]} key={key}><Pinterest width="30px"/></a>;
                                         case "twitter":
