@@ -9,6 +9,7 @@ function MyApp({ Component, pageProps }) {
 	const categoriesServices = [];
 	const categoriesEvents = [];
 	const infosRestaurant = [];
+
 	function getCategories () {
 		for (let [key, value] of Object.entries(DataJSON)) {
 			if (key.substring(0, 1) == "*" ){
@@ -46,7 +47,13 @@ function MyApp({ Component, pageProps }) {
 			categoriesEvents={categoriesEvents}
 			infosRestaurant={infosRestaurant}
 		>
-		<Component {...pageProps} menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
+		<Component {...pageProps} 
+			menuOpen={menuOpen} 
+			setMenuOpen={setMenuOpen} 
+			categoriesFoods={categoriesFoods}
+			categoriesServices={categoriesServices}
+			categoriesEvents={categoriesEvents}
+			infosRestaurant={infosRestaurant}/>
 		<style jsx global>{`
 			html {
 			background: linear-gradient(#FFFFFF, #F7F7F7);
@@ -58,7 +65,7 @@ function MyApp({ Component, pageProps }) {
 			}
 			.hero{
 			height: 100vh;
-			padding-bottom: 6rem;
+			padding-bottom: 10rem;
 			overflow: scroll;
 			}
 		`}</style>

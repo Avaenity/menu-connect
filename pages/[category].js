@@ -1,9 +1,23 @@
 import CardOrder from '../components/CardOrder'
 import { useRouter } from 'next/router'
 
+
 export default function Category (props) {
     const router = useRouter()
     const category = router.query["category"]
+
+    //get types
+    const types =[]
+    const getTypes = props.categoriesFoods.map(function(el, index) {
+        if (Object.keys(el) == category){
+            let unique = [...new Set(props.categoriesFoods[index][category].map(item => item.type))];
+            for (let i = 0; i < unique.length; i++){
+                types.push(unique[i])
+            }
+        }
+    })
+    
+    
 
     return (
         <div className="hero relative">
@@ -21,24 +35,17 @@ export default function Category (props) {
                     </ul>
                 </div>
                 <div className="order-content mt-4 flex flex-col">
-                    <h2 className="text-base font-semibold mb-2 uppercase">Viandes</h2>
-                    <CardOrder />
-                    <CardOrder />
-                    <CardOrder />
-                    <CardOrder />
-                    <CardOrder />
-                    <h2 className="text-base font-semibold mb-2 uppercase">Poissons</h2>
-                    <CardOrder />
-                    <CardOrder />
-                    <CardOrder />
-                    <CardOrder />
-                    <CardOrder />
-                    <h2 className="text-base font-semibold mb-2 uppercase">Végétarien</h2>
-                    <CardOrder />
-                    <CardOrder />
-                    <CardOrder />
-                    <CardOrder />
-                    <CardOrder />
+                    {
+                        types.map(function(el, index) {
+                            return <div key={index}>
+                                <h2 className="text-base font-semibold mb-2 uppercase">{el}</h2><CardOrder />
+                                <CardOrder />
+                                <CardOrder />
+                                <CardOrder />
+                                <CardOrder />
+                            </div>
+                        })
+                    }
                 </div>
             </div>
             <style jsx>{`
