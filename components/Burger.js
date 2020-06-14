@@ -1,8 +1,8 @@
 import { bool, func } from 'prop-types';
 
-const Burger = ({ menuOpen, setMenuOpen }) => {
+const Burger = ({ menuOpen, setMenuOpen, isWhite }) => {
     return (
-        <div className="burger" open={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>
+        <div className={`burger ${isWhite ? "white" : ""}`} open={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>
             <div />
             <div />
             <div />
@@ -26,11 +26,14 @@ const Burger = ({ menuOpen, setMenuOpen }) => {
                 .burger div {
                     width: 1.5rem;
                     height: 0.2rem;
-                    background: white;
                     border-radius: 10px;
                     transition: all 0.3s linear;
                     position: relative;
                     transform-origin: 1px;
+                    background-color: #B5B5B5;
+                }
+                .burger.white div{
+                    background-color: white;
                 }
             `}</style>
         </div>

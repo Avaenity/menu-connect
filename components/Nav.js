@@ -1,15 +1,23 @@
 import Link from 'next/link'
 import Burger from './Burger'
 import Search from '../components/svg/Search'
+import { useRouter } from 'next/router'
 
 
 export default function Nav({ menuOpen, setMenuOpen }) {
 
+  const router = useRouter()
+  const pageWhiteBg = ['/[category]', '/event', '/roomservice', '/welcome']
+  const hasWhiteBg = pageWhiteBg.includes(router.pathname)
+
+  
+  
+
   return (
     <nav>
-      <Burger menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
+      <Burger menuOpen={menuOpen} setMenuOpen={setMenuOpen} isWhite={!hasWhiteBg}/>
       <div className="search">
-      <Search fill="white"/>
+      <Search fill={hasWhiteBg ? '#B5B5B5' : 'white'}/>
       </div>
       <style jsx>{`
         .search {
