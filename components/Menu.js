@@ -2,10 +2,9 @@ import Instagram from '../public/svg/Instagram.svg';
 import TA from '../public/svg/TA.svg';
 import Twitter from '../public/svg/Twitter.svg';
 import Pinterest from '../public/svg/Pinterest.svg';
-import Facebook from '../public/svg/Facebook.svg';
+
 import MenuConnect from '../public/svg/menu-connect.svg';
 import Link from 'next/link';
-import DataJSON from '../data.json';
 
 const Menu = (props) => {
 
@@ -43,7 +42,7 @@ const Menu = (props) => {
                                 Object.keys(props.infosRestaurant[0]).map(function(el, key) {
                                     switch (el){
                                         case "facebook":
-                                            return <a className="mr-4" href={props.infosRestaurant[0][el]} key={key}><Facebook width="30px"/></a>;
+                                            return <a className="mr-4" href={props.infosRestaurant[0][el]} key={key}></a>;
                                         case "pinterest":
                                             return <a className="mr-4" href={props.infosRestaurant[0][el]} key={key}><Pinterest width="30px"/></a>;
                                         case "twitter":
