@@ -106,10 +106,12 @@
     ],
     "*Accompagnements": [
         {
+            "id": "acc103",
             "nom": "Ratatouille au livèche",
             "prix": 4
         },
         {
+            "id": "acc102",
             "nom": "Frites",
             "prix": 4
         },

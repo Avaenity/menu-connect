@@ -1,5 +1,6 @@
 export default function CardOrder(props) {
 
+    console.log(props.infoItem)
 
     return (
         <div className="card p-4 mb-8 rounded shadow-md flex flex-row relative">

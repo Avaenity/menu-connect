@@ -8,6 +8,7 @@ export default function Category (props) {
 
     //get types
     const types = []
+    const items = []
     const getTypes = props.categoriesFoods.map(function(el, index) {
         if (Object.keys(el) == category){
             //types
