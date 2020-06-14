@@ -23,7 +23,7 @@ export default function Nav({ menuOpen, setMenuOpen }) {
             z-index: 10;
             transition: filter 0.5s ease-in-out;
             filter: blur(${menuOpen ? "10px" : "0"});
-            //TODO put prevent default on click on search if open is true
+            //TODO  put prevent default on click on search if open is true
         }
       `}</style>
     </nav>
