@@ -1,4 +1,4 @@
-import CardOrder from '../components/CardOrder'
+import CardOrderContainer from '../components/CardOrderContainer'
 import { useRouter } from 'next/router'
 
 
@@ -7,15 +7,26 @@ export default function Category (props) {
     const category = router.query["category"]
 
     //get types
-    const types =[]
+    const types = []
+    const items = []
     const getTypes = props.categoriesFoods.map(function(el, index) {
         if (Object.keys(el) == category){
+            //types
             let unique = [...new Set(props.categoriesFoods[index][category].map(item => item.type))];
             for (let i = 0; i < unique.length; i++){
                 types.push(unique[i])
             }
+            //items
+            for (let i = 0; i < props.categoriesFoods[index][category].length; i++){
+                items.push(props.categoriesFoods[index][category][i])
+            }
         }
     })
+
+    let itemfiltered =  items.filter(function(hero) {
+        return hero.type == 'eau';
+    });
+
     
     
 
@@ -38,11 +49,8 @@ export default function Category (props) {
                     {
                         types.map(function(el, index) {
                             return <div key={index}>
-                                <h2 className="text-base font-semibold mb-2 uppercase">{el}</h2><CardOrder />
-                                <CardOrder />
-                                <CardOrder />
-                                <CardOrder />
-                                <CardOrder />
+                                <h2 className="text-base font-semibold mb-2 uppercase">{el}</h2>
+                                <CardOrderContainer types={el} categoriesFoods={props.categoriesFoods}/>
                             </div>
                         })
                     }

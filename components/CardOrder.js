@@ -1,4 +1,7 @@
 export default function CardOrder() {
+
+    console.log()
+
     return (
         <div className="card p-4 mb-8 rounded shadow-md flex flex-row relative">
             <div className="bulle-container absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2">
