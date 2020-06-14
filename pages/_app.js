@@ -65,7 +65,7 @@ function MyApp({ Component, pageProps }) {
 			}
 			.hero{
 			height: 100vh;
-			padding-bottom: 10rem;
+			padding-bottom: 6rem;
 			overflow: scroll;
 			}
 		`}</style>

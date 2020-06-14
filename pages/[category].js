@@ -16,16 +16,8 @@ export default function Category (props) {
             for (let i = 0; i < unique.length; i++){
                 types.push(unique[i])
             }
-            //items
-            for (let i = 0; i < props.categoriesFoods[index][category].length; i++){
-                items.push(props.categoriesFoods[index][category][i])
-            }
         }
     })
-
-    let itemfiltered =  items.filter(function(hero) {
-        return hero.type == 'eau';
-    });
 
     
     

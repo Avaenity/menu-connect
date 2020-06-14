@@ -13,19 +13,19 @@
             "id": "for100",
             "nom": "Menu déjeuner",
             "info": "Sauf samedi et jours fériés",
-            "plats": ["ent101","ent102","ent103","ent104","ent105"],
-            "accompagnements": ["acc100","acc101","acc102"],
-            "fromages": ["fro100","fro101"],
+            "plats": "ent101,ent102,ent103,ent104,ent105",
+            "accompagnements": "acc100,acc101,acc102",
+            "fromages": "fro100, fro101",
             "prix": 19.5
         },
         {
             "id": "for101",
             "nom": "Menu Complet",
             "info": "Du mardi au samedi, midi et soir",
-            "entres": ["ent101","ent102","ent103","ent104","ent105"],
-            "plats": ["pla100","pla101","pla102","pla103","pla104"],
-            "accompagnements": ["acc100","acc101","acc102"],
-            "fromages": ["fro100","fro101"],
+            "entrees": "ent101,ent102,ent103,ent104,ent105",
+            "plats": "pla100,pla101,pla102,pla103,pla104",
+            "accompagnements": "acc100,acc101,acc102",
+            "fromages": "fro100, fro101",
             "prix": 35
         }
     ],
@@ -34,7 +34,7 @@
             "id": "ent100",
             "type": "poissons",
             "nom": "Noix de saint-jacques à la plancha, coulis d'agrumes",
-            "ingrdients": "Noix de saint-jacques, Légumes de saison, Coulis orange et pamplemousse",
+            "ingredients": "Noix de saint-jacques, Légumes de saison, Coulis orange et pamplemousse",
             "prix": 10.5
         },
         {
@@ -47,28 +47,28 @@
             "id": "ent102",
             "type": "poissons",
             "nom": "Bruschetta de gambas et guacamole",
-            "ingrdients": "Gambas, Avocat, Citron, Persil, Pain grillé",
+            "ingredients": "Gambas, Avocat, Citron, Persil, Pain grillé",
             "prix": 9.5
         },
         {
             "id": "ent103",
             "type": "poissons",
             "nom": "Roulé au saumon",
-            "ingrdients": "Saumon,Mangue, Concombre, Coriande, Gingembre confit",
+            "ingredients": "Saumon,Mangue, Concombre, Coriande, Gingembre confit",
             "prix": 9.5
         },
         {
             "id": "ent104",
             "type": "végétarien",
             "nom": "Assiette végétarienne",
-            "ingrdients": "Légumes marinés, Provola fumé, Galette d'avoine, Chimichurri",
+            "ingredients": "Légumes marinés, Provola fumé, Galette d'avoine, Chimichurri",
             "prix": 9.5
         },
         {
             "id": "ent105",
             "type": "autre",
             "nom": " Oeufs en cocotte au foie gras poêlé",
-            "ingrdients": "Oeufs, Foie gras, Vinaigre de balsamique",
+            "ingredients": "Oeufs, Foie gras, Vinaigre de balsamique",
             "prix": 10.5
         }
     ],
@@ -160,19 +160,19 @@
         {
             "id": "des103",
             "nom": "Tiramisu au Nocciolata",
-            "ingrdients": "Pâte chocololat - noisettes Bio sans huile de palme",
+            "ingredients": "Pâte chocololat - noisettes Bio sans huile de palme",
             "prix": 7.5
         },
         {
             "id": "des104",
             "nom": "Coupe de glace 3 boules au choix",
-            "ingrdients": "Vanille, Chocolat, Café, Caramel beurre salé, Coco, Citron,Fraise",
+            "ingredients": "Vanille, Chocolat, Café, Caramel beurre salé, Coco, Citron,Fraise",
             "prix": 7.5
         },
         {
             "id": "des105",
             "nom": "Café gourmand",
-            "ingrdients": "Café et 3 mini desserts",
+            "ingredients": "Café et 3 mini desserts",
             "prix": 7.5
         },
         {
@@ -184,7 +184,7 @@
             "id": "boi100",
             "type": "apéritifs",
             "nom": "Cockatil maison (20cl)",
-            "ingrdients": "Rhum blanc, Liqueur de mandarine, Jus de citron, Limonade",
+            "ingredients": "Rhum blanc, Liqueur de mandarine, Jus de citron, Limonade",
             "prix": 8
         },
         {
@@ -203,14 +203,14 @@
             "id": "boi102",
             "type": "apéritifs",
             "nom": "Martini (6cl)",
-            "ingrdients": "Rouge ou blanc",
+            "ingredients": "Rouge ou blanc",
             "prix": 5
         },
         {
             "id": "boi103",
             "type": "apéritifs",
             "nom": "Porto (8cl)",
-            "ingrdients": "Rouge ou blanc",
+            "ingredients": "Rouge ou blanc",
             "prix": 5
         },
         {
@@ -223,7 +223,7 @@
             "id": "boi105",
             "type": "bière",
             "nom": "Font And Bleau (33cl)",
-            "ingrdients": "Blanche 5B, Blonde 6B, Ambrée 7A",
+            "ingredients": "Blanche 5B, Blonde 6B, Ambrée 7A",
             "prix": 6.5
         },
         {
@@ -236,7 +236,7 @@
             "id": "boi107",
             "type": "bière",
             "nom": "Heineken 0%",
-            "ingrdients": "Sans alcool",
+            "ingredients": "Sans alcool",
             "prix": 4
         },
         {
@@ -270,7 +270,7 @@
             "type": "vin rouge",
             "provenance": "Bordeaux",
             "nom": "Côte de Bordeaux - Les Hauts de Palette (verre - 12,5cl)",
-            "ingrdients": "2014 - Cabernet Sauvignon, Merlot, Cabernet Franc",
+            "ingredients": "2014 - Cabernet Sauvignon, Merlot, Cabernet Franc",
             "prix": 5
         },
         {
@@ -278,7 +278,7 @@
             "type": "vin rouge",
             "provenance": "Bordeaux",
             "nom": "Côte de Bordeaux - Les Hauts de Palette (25cl)",
-            "ingrdients": "2014 - Cabernet Sauvignon, Merlot, Cabernet Franc",
+            "ingredients": "2014 - Cabernet Sauvignon, Merlot, Cabernet Franc",
             "prix": 9.5
         },
         {
@@ -286,7 +286,7 @@
             "type": "vin rouge",
             "provenance": "Bordeaux",
             "nom": "Côte de Bordeaux - Les Hauts de Palette (46cl)",
-            "ingrdients": "2014 - Cabernet Sauvignon, Merlot, Cabernet Franc",
+            "ingredients": "2014 - Cabernet Sauvignon, Merlot, Cabernet Franc",
             "prix": 17
         },
         {
@@ -294,7 +294,7 @@
             "type": "vin rouge",
             "provenance": "Bordeaux",
             "nom": "Côte de Bordeaux - Les Hauts de Palette (btl - 75cl)",
-            "ingrdients": "2014 - Cabernet Sauvignon, Merlot, Cabernet Franc",
+            "ingredients": "2014 - Cabernet Sauvignon, Merlot, Cabernet Franc",
             "prix": 28
         },
         {
@@ -302,7 +302,7 @@
             "type": "vin rouge",
             "provenance": "Bourgogne",
             "nom": "Irancy - Caves Bienvenu (verre - 12,5cl)",
-            "ingrdients": "2017 - Pinot noir",
+            "ingredients": "2017 - Pinot noir",
             "prix": 6
         },
         {
@@ -310,7 +310,7 @@
             "type": "vin rouge",
             "provenance": "Bourgogne",
             "nom": "Irancy - Caves Bienvenu (25cl)",
-            "ingrdients": "2017 - Pinot noir",
+            "ingredients": "2017 - Pinot noir",
             "prix": 11.5
         },
         {
@@ -318,7 +318,7 @@
             "type": "vin rouge",
             "provenance": "Bourgogne",
             "nom": "Irancy - Caves Bienvenu (46cl)",
-            "ingrdients": "2017 - Pinot noir",
+            "ingredients": "2017 - Pinot noir",
             "prix": 20.5
         },
         {
@@ -326,7 +326,7 @@
             "type": "vin rouge",
             "provenance": "Bourgogne",
             "nom": "Irancy - Caves Bienvenu (btl - 75cl)",
-            "ingrdients": "2017 - Pinot noir",
+            "ingredients": "2017 - Pinot noir",
             "prix": 32
         },
         {
@@ -334,7 +334,7 @@
             "type": "vin rouge",
             "provenance": "Vallée du Rhône",
             "nom": "Crozes - Hermitage - Les Hauts du fief (verre - 12,5cl)",
-            "ingrdients": "2015 - Syrah",
+            "ingredients": "2015 - Syrah",
             "prix": 7
         },
         {
@@ -342,7 +342,7 @@
             "type": "vin rouge",
             "provenance": "Vallée du Rhône",
             "nom": "Crozes - Hermitage - Les Hauts du fief (25cl)",
-            "ingrdients": "2015 - Syrah",
+            "ingredients": "2015 - Syrah",
             "prix": 13.5
         },
         {
@@ -350,7 +350,7 @@
             "type": "vin rouge",
             "provenance": "Vallée du Rhône",
             "nom": "Crozes - Hermitage - Les Hauts du fief (46cl)",
-            "ingrdients": "2015 - Syrah",
+            "ingredients": "2015 - Syrah",
             "prix": 25
         },
         {
@@ -358,7 +358,7 @@
             "type": "vin rouge",
             "provenance": "Vallée du Rhône",
             "nom": "Crozes - Hermitage - Les Hauts du fief (Btl - 75cl)",
-            "ingrdients": "2015 - Syrah",
+            "ingredients": "2015 - Syrah",
             "prix": 39.5
         },
         {
@@ -366,7 +366,7 @@
             "type": "vin blanc",
             "provenance": "Sud Ouest",
             "nom": "Saussignac - Liquoreux - Château Marie Plaisance (verre - 12,5cl)",
-            "ingrdients": "2015 - Sémillion - Sauvignon blanc",
+            "ingredients": "2015 - Sémillion - Sauvignon blanc",
             "prix": 7
         },
         {
@@ -374,7 +374,7 @@
             "type": "vin blanc",
             "provenance": "Sud Ouest",
             "nom": "Saussignac - Liquoreux - Château Marie Plaisance (25cl)",
-            "ingrdients": "2015 - Sémillion - Sauvignon blanc",
+            "ingredients": "2015 - Sémillion - Sauvignon blanc",
             "prix": 13.5
         },
         {
@@ -382,7 +382,7 @@
             "type": "vin blanc",
             "provenance": "Sud Ouest",
             "nom": "Saussignac - Liquoreux - Château Marie Plaisance (46cl)",
-            "ingrdients": "2015 - Sémillion - Sauvignon blanc",
+            "ingredients": "2015 - Sémillion - Sauvignon blanc",
             "prix": 25
         },
         {
@@ -390,7 +390,7 @@
             "type": "vin blanc",
             "provenance": "Sud Ouest",
             "nom": "Saussignac - Liquoreux - Château Marie Plaisance (btl - 75cl)",
-            "ingrdients": "2015 - Sémillion - Sauvignon blanc",
+            "ingredients": "2015 - Sémillion - Sauvignon blanc",
             "prix": 39.5
         },
         {
@@ -398,7 +398,7 @@
             "type": "vin blanc",
             "provenance": "Bourgogne",
             "nom": "Rully 1er Cru Rabourcé (btl - 75cl)",
-            "ingrdients": "2016 - Chardonnay",
+            "ingredients": "2016 - Chardonnay",
             "prix": 56
         },
         {
@@ -406,7 +406,7 @@
             "type": "vin blanc",
             "provenance": "Bourgogne",
             "nom": "Chardonnay Secret De Famille",
-            "ingrdients": "2017 - Chardonnay",
+            "ingredients": "2017 - Chardonnay",
             "prix": 7
         },
         {
@@ -414,7 +414,7 @@
             "type": "vin blanc",
             "provenance": "Bourgogne",
             "nom": "Chardonnay Secret De Famille",
-            "ingrdients": "2017 - Chardonnay",
+            "ingredients": "2017 - Chardonnay",
             "prix": 13.5
         },
         {
@@ -422,7 +422,7 @@
             "type": "vin blanc",
             "provenance": "Bourgogne",
             "nom": "Chardonnay Secret De Famille",
-            "ingrdients": "2017 - Chardonnay",
+            "ingredients": "2017 - Chardonnay",
             "prix": 25
         },
         {
@@ -430,7 +430,7 @@
             "type": "vin blanc",
             "provenance": "Bourgogne",
             "nom": "Chardonnay Secret De Famille",
-            "ingrdients": "2017 - Chardonnay",
+            "ingredients": "2017 - Chardonnay",
             "prix": 39.5
         },
         {
@@ -438,7 +438,7 @@
             "type": "vin rosé",
             "provenance": "Côtes de Provence",
             "nom": "Trinity Sainte Victoire (btl - 75cl)",
-            "ingrdients": "2018 - Cinsault, Syrah, Grenache",
+            "ingredients": "2018 - Cinsault, Syrah, Grenache",
             "prix": 26
         },
         {
@@ -446,7 +446,7 @@
             "type": "vin rosé",
             "provenance": "Côtes de Gascogne",
             "nom": "Uby n°6 (verre - 12,5cl)",
-            "ingrdients": "2018 - Cabernet Franc, Cabernet Sauvignon, Merlot, Syrah",
+            "ingredients": "2018 - Cabernet Franc, Cabernet Sauvignon, Merlot, Syrah",
             "prix": 4
         },
         {
@@ -454,7 +454,7 @@
             "type": "vin rosé",
             "provenance": "Côtes de Gascogne",
             "nom": "Uby n°6 (25cl)",
-            "ingrdients": "2018 - Cabernet Franc, Cabernet Sauvignon, Merlot, Syrah",
+            "ingredients": "2018 - Cabernet Franc, Cabernet Sauvignon, Merlot, Syrah",
             "prix": 7.5
         },
         {
@@ -462,7 +462,7 @@
             "type": "vin rosé",
             "provenance": "Côtes de Gascogne",
             "nom": "Uby n°6 (46cl)",
-            "ingrdients": "2018 - Cabernet Franc, Cabernet Sauvignon, Merlot, Syrah",
+            "ingredients": "2018 - Cabernet Franc, Cabernet Sauvignon, Merlot, Syrah",
             "prix": 14
         },
         {
@@ -470,7 +470,7 @@
             "type": "vin rosé",
             "provenance": "Côtes de Gascogne",
             "nom": "Uby n°6 (btl - 75cl)",
-            "ingrdients": "2018 - Cabernet Franc, Cabernet Sauvignon, Merlot, Syrah",
+            "ingredients": "2018 - Cabernet Franc, Cabernet Sauvignon, Merlot, Syrah",
             "prix": 22
         },
         {

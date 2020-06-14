@@ -1,6 +1,5 @@
-export default function CardOrder() {
+export default function CardOrder(props) {
 
-    console.log()
 
     return (
         <div className="card p-4 mb-8 rounded shadow-md flex flex-row relative">
@@ -12,11 +11,11 @@ export default function CardOrder() {
                 </div>
             </div>
             <div className="dish-desc flex-grow">
-                <p className="dish-name text-base font-semibold">Salade Milannaise</p>
-                <p className="dish-ing text-xs italic text-gray-500">Iceberg, Thon, Maïs, Tomate cerise, Anchois, Vinaigrette d’abricot</p>
+                <p className="dish-name text-base font-semibold pb-2">{props.infoItem.nom}</p>
+                <p className="dish-ing text-xs italic text-gray-500">{props.infoItem.ingredients}</p>
             </div>
             <div className="dish-price">
-                <span className="price">8</span><span className="currency">€</span>
+                <span className="price">{props.infoItem.prix}</span><span className="currency">€</span>
             </div>
             <style jsx>{`
                 .qty-container{

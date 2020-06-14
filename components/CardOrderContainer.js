@@ -21,11 +21,14 @@ export default function CardOrderContainer(props) {
     let itemfiltered =  items.filter(function(hero) {
         return hero.type == props.types;
     });
-    console.log(itemfiltered)
 
     return (
         <div className="card-container">
-            <CardOrder/>
+            {
+                itemfiltered.map(function(el, i){
+                    return <CardOrder infoItem={el} key={i}/>
+                })
+            }
         </div>
     )
 }

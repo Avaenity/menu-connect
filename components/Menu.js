@@ -90,7 +90,7 @@ const Menu = (props) => {
                     height: 100vh;
                     width: 80vw;
                     text-align: left;
-                    position: absolute;
+                    position: fixed;
                     top: 0;
                     left: 0;
                     z-index: 11;
