@@ -1,9 +1,9 @@
 import { string,bool,func } from 'prop-types';
 
 import Link from 'next/link'
-import Place from '../public/svg/place.svg'
-import Home from '../public/svg/home.svg'
-import Order from '../public/svg/order.svg'
+import Place from '../components/svg/Place'
+import Home from '../components/svg/Home'
+import Order from '../components/svg/Order'
 
 
 export default function TabNav({ menuOpen, tabActive, setTabActive }) {

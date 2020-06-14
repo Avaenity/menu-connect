@@ -1,9 +1,9 @@
-import Instagram from '../public/svg/Instagram.svg';
-import TA from '../public/svg/TA.svg';
-import Twitter from '../public/svg/Twitter.svg';
-import Pinterest from '../public/svg/Pinterest.svg';
+import Instagram from '../components/svg/Instagram';
+import TA from '../components/svg/TA';
+import Twitter from '../components/svg/Twitter';
+import Pinterest from '../components/svg/Pinterest';
 import Facebook from '../components/svg/Facebook';
-import MenuConnect from '../public/svg/menu-connect.svg';
+import MenuConnect from '../components/svg/MenuConnect';
 import Link from 'next/link';
 
 const Menu = (props) => {

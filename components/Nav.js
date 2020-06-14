@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Burger from './Burger'
-import Search from '../public/svg/search.svg'
+import Search from '../components/svg/Search'
 
 
 export default function Nav({ menuOpen, setMenuOpen }) {
