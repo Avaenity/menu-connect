@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-export default function CardIllus (props) {
+export default function CardIllusOrder (props) {
 
     const illuCard = {
         streaming: "roomservice/tv.jpg",

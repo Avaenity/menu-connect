@@ -1,29 +1,41 @@
 import { bool, func } from 'prop-types';
 
-const Burger = ({ menuOpen, setMenuOpen, isWhite }) => {
+const Burger = ({ menuOpen, setMenuOpen, isWhite, hasBack }) => {
     return (
-        <div className={`burger ${isWhite ? "white" : ""}`} open={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>
-            <div />
-            <div />
-            <div />
+        <div className="burger" open={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>
+            <div className={`burger-container${isWhite ? " white" : ""}${hasBack ? "" : " inactive"}`}>    
+                <div />
+                <div />
+                <div />
+            </div>
+            <div className={`burger-container ${isWhite ? "white" : ""}${hasBack ? " inactive" : ""}`}>
+
+            </div>
 
             <style jsx>{`
                 .burger {
                     position: absolute;
                     top: 2rem;
                     left: 2rem;
+                    border: none;
+                    z-index: 10;
+                }
+
+                .burger-container{
                     display: flex;
                     flex-direction: column;
                     justify-content: space-around;
                     width: 3rem;
                     height: 3rem;
-                    background: transparent;
-                    border: none;
                     padding: 0.8rem 0.6rem;
-                    z-index: 10;
+                    background: transparent;
+                }
+                .burger-container.inactive{
+                    display: none;
+                    opcaity: 0;
                 }
                     
-                .burger div {
+                .burger-container div {
                     width: 100%;
                     height: 4px;
                     border-radius: 10px;
@@ -32,7 +44,7 @@ const Burger = ({ menuOpen, setMenuOpen, isWhite }) => {
                     transform-origin: 1px;
                     background-color: #718096;
                 }
-                .burger.white div{
+                .burger-container.white div{
                     background-color: white;
                 }
             `}</style>

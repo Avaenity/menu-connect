@@ -1,4 +1,4 @@
-import Burger from './Burger'
+import Burger from './BurgerAndBack'
 import Search from '../components/svg/Search'
 import { useRouter } from 'next/router'
 
@@ -8,15 +8,19 @@ export default function Nav({ menuOpen, setMenuOpen }) {
   const router = useRouter()
   
   //Toggle class to change icon color
-  const pageWhiteBg = ['/[category]', '/event', '/services', '/welcome',]
+  const pageWhiteBg = ['/[category]', '/events', '/services', '/welcome']
   const hasWhiteBg = pageWhiteBg.includes(router.pathname)
+
+  //Toggle class to change burger to back
+  const pageNeedBack = ['/[serviceItem]', '/[eventItem]']
+  const hasBack = pageNeedBack.includes(router.pathname)
 
   
   
 
   return (
     <nav>
-      <Burger menuOpen={menuOpen} setMenuOpen={setMenuOpen} isWhite={!hasWhiteBg}/>
+      <Burger menuOpen={menuOpen} setMenuOpen={setMenuOpen} isWhite={!hasWhiteBg} hasBack={hasBack}/>
       <div className="search">
       <Search fill={hasWhiteBg ? '#718096' : 'white'}/>
       </div>

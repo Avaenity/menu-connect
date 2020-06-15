@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 
-export default function Item (props) {
+export default function ServiceItem (props) {
 
     
 
@@ -21,7 +21,7 @@ export default function Item (props) {
             return (el.id == Object.values(router.query)[0])
     })[0];
 
-    //to avoid fail build
+    //to avoid fail static build
     if (!infoService) return <p></p>
 
     return (

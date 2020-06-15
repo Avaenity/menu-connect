@@ -30,7 +30,7 @@ const Menu = (props) => {
                     {
                         <ul className="categories mb-10 relative">
                             {props.categoriesEvents.map((e, index) => (
-                                <Link href="/event" key={index}><li className="uppercase mb-4" onClick={() => props.setMenuOpen(!props.menuOpen)}>{Object.keys(e)[0]}</li></Link>
+                                <Link href="/events" key={index}><li className="uppercase mb-4" onClick={() => props.setMenuOpen(!props.menuOpen)}>{Object.keys(e)[0]}</li></Link>
                             ))}
                         </ul>
                     }

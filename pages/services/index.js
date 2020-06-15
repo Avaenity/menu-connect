@@ -1,4 +1,4 @@
-import CardIllus from '../../components/CardIllus'
+import CardIllus from '../../components/CardIllusOrder'
 
 export default function RoomService(props) {
 
