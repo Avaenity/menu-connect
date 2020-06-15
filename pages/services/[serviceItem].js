@@ -2,6 +2,8 @@ import { useRouter } from 'next/router'
 
 export default function Item (props) {
 
+    
+
     const illuCard = {
         streaming: "roomservice/tv.jpg",
         taxi: "roomservice/taxi.jpg",
@@ -18,6 +20,9 @@ export default function Item (props) {
     var infoService = props.categoriesServices[0]["Services en chambre"].filter(function(el){
             return (el.id == Object.values(router.query)[0])
     })[0];
+
+    //to avoid fail build
+    if (!infoService) return <p></p>
 
     return (
         <div className="main-content relative">
@@ -59,10 +64,3 @@ export default function Item (props) {
         </div>
     )
 }
-
-export async function getServerSideProps(context) {
-    
-    return {
-      props: {}, // will be passed to the page component as props
-    }
-  }
