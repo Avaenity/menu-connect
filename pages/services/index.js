@@ -1,10 +1,6 @@
-import CardIllus from '../components/CardIllus'
+import CardIllus from '../../components/CardIllus'
 
 export default function RoomService(props) {
-
-	props.categoriesServices[0]["Services en chambre"].map(function(el, index) {
-		console.log(el)
-	})
 
 	return (
 		<div className="main-content h-full relative">
