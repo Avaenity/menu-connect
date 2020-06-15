@@ -66,8 +66,8 @@ const Menu = (props) => {
                     position: absolute;
                     right: 2rem;
                     top: 2rem;
-                    width: 20px;
-                    height: 20px;
+                    width: 30px;
+                    height: 30px;
                 }
                 .close:before, .close:after {
                     position: absolute;
@@ -76,7 +76,7 @@ const Menu = (props) => {
                     height: 24px;
                     width: 3px;
                     border-radius: 20px;
-                    background-color: #B5B5B5;
+                    background-color: #718096;
                 }
                 .close:before {
                     transform: rotate(45deg);
@@ -105,7 +105,7 @@ const Menu = (props) => {
                     bottom: -15px;
                     height: 1px;
                     width: 40%;
-                    background-color: #B5B5B5;
+                    background-color: #718096;
                     opacity: 0.5;
                 }
             `}</style>

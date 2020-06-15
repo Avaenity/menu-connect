@@ -16,7 +16,6 @@ export default function Layout(props) {
                 infosRestaurant={props.infosRestaurant}
             />
             {props.children}
-            <TabNav menuOpen={props.menuOpen} tabActive={props.tabActive} setTabActive={props.setTabActive}/>
         </div>
     )
 }

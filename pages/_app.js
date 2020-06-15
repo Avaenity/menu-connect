@@ -2,6 +2,7 @@ import '../styles/index.css'
 import Layout from '../components/Layout'
 import React, { useState } from 'react'
 import DataJSON from '../data.json';
+import TabNav from '../components/TabNav'
 
 function MyApp({ Component, pageProps }) {
 
@@ -54,19 +55,26 @@ function MyApp({ Component, pageProps }) {
 			categoriesServices={categoriesServices}
 			categoriesEvents={categoriesEvents}
 			infosRestaurant={infosRestaurant}/>
+		<TabNav 
+			menuOpen={menuOpen} 
+			tabActive={tabActive} 
+			setTabActive={setTabActive}/>
 		<style jsx global>{`
+
+			:root{
+				--tabnav-height: 6rem;
+			}
 			html {
-			background: linear-gradient(#FFFFFF, #F7F7F7);
-			height: 100vh;
-			color: #484848;
+				background: linear-gradient(#FFFFFF, #F7F7F7);
+				height: 100vh;
+				color: #484848;
 			}
 			p, li {
-			font-size: 1.125rem;
+				font-size: 1.125rem;
 			}
-			.hero{
-			height: 100vh;
-			padding-bottom: 6rem;
-			overflow: scroll;
+			.main-content{
+				height: calc(100vh - var(--tabnav-height));
+				overflow: hidden;
 			}
 		`}</style>
 		</Layout>

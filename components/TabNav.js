@@ -13,28 +13,29 @@ export default function TabNav({ menuOpen, tabActive, setTabActive }) {
     } 
 
     return (
-        <div className="tapbar w-full fixed bottom-0 flex flex-row justify-around h-24 bg-white">
+        <div className="tabnav w-full fixed bottom-0 flex flex-row justify-around bg-white">
             <Link href="/welcome">
                 <div className={`svg relative flex flex-col justify-center ${isActive('place') ? "active" : ""}`} data-name="place" onClick={(e) => setTabActive(e.currentTarget.dataset.name)}>
                 {/* TODO find a way to pass data-name in isActive() */}
-                    <Place fill={`${isActive('place') ? "#247BA0" : "#B5B5B5"}`} width={`${isActive('place') ? "35px" : "25px"}`}/>
+                    <Place fill={`${isActive('place') ? "#247BA0" : "#718096"}`} width={`${isActive('place') ? "35px" : "25px"}`}/>
                 </div>
             </Link>
             <Link href="/">
                 <div className={`svg relative flex flex-col justify-center ${isActive('home') ? "active" : ""}`} data-name="home" onClick={(e) => setTabActive(e.currentTarget.dataset.name)}>
                 {/* TODO find a way to pass data-name in isActive() */}
-                    <Home fill={`${isActive('home') ? "#247BA0" : "#B5B5B5"}`} width={`${isActive('home') ? "35px" : "25px"}`}/>
+                    <Home fill={`${isActive('home') ? "#247BA0" : "#718096"}`} width={`${isActive('home') ? "35px" : "25px"}`}/>
                 </div>
             </Link>
             <Link href="/order">
                 <div className={`svg relative flex flex-col justify-center ${isActive('order') ? "active" : ""}`} data-name="order" onClick={(e) => setTabActive(e.currentTarget.dataset.name)}>
                 {/* TODO find a way to pass data-name in isActive() */}
-                    <Order fill={`${isActive('order') ? "#247BA0" : "#B5B5B5"}`} width={`${isActive('order') ? "30px" : "20px"}`}/>
+                    <Order fill={`${isActive('order') ? "#247BA0" : "#718096"}`} width={`${isActive('order') ? "30px" : "20px"}`}/>
                 </div>
             </Link>
 
             <style jsx>{`
-                .tapbar{
+                .tabnav{
+                    height: var(--tabnav-height);
                     box-shadow: 0px 0px 25px rgba(181,181,181,0.6);
                     transition: filter 0.5s ease-in-out;
                     filter: blur(${menuOpen ? "10px" : "0"});

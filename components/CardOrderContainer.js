@@ -29,6 +29,8 @@ export default function CardOrderContainer(props) {
                     return <CardOrder infoItem={el} key={i}/>
                 })
             }
+            <style jsx>{`
+            `}</style>
         </div>
     )
 }

@@ -5,7 +5,7 @@ export default function Event() {
   
 
     return (
-      <div className="hero">
+      <div className="main-content">
         <div className="content-container pt-16 px-10">
           <img className="logo-banner w-24 mx-auto mb-4" src="/logo.png" />
           <div className="pb-8">

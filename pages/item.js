@@ -1,6 +1,6 @@
 export default function Item () {
     return (
-        <div className="hero relative">
+        <div className="main-content relative">
             <div className="item-illus bg-cover bg-center bg-no-repeat relative"></div>
             <div className="relative w-full">
                 <div className="title-item absolute font-semibold z-20 text-2xl text-white">Service de pressing</div>

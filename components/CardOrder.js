@@ -11,10 +11,10 @@ export default function CardOrder(props) {
             </div>
             <div className="dish-desc flex-grow">
                 <p className="dish-name text-base font-semibold pb-2">{props.infoItem.nom}</p>
-                <p className="dish-ing text-xs italic text-gray-500">{props.infoItem.ingredients}</p>
+                <p className="dish-ing text-sm italic text-gray-600">{props.infoItem.ingredients}</p>
             </div>
             <div className="dish-price">
-                <span className="price">{props.infoItem.prix}</span><span className="currency">€</span>
+                <span className="price text-base">{props.infoItem.prix}</span><span className="currency">€</span>
             </div>
             <style jsx>{`
                 .qty-container{

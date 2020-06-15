@@ -15,22 +15,22 @@ const Burger = ({ menuOpen, setMenuOpen, isWhite }) => {
                     display: flex;
                     flex-direction: column;
                     justify-content: space-around;
-                    width: 1.5rem;
-                    height: 1.3rem;
+                    width: 3rem;
+                    height: 3rem;
                     background: transparent;
                     border: none;
-                    padding: 0;
+                    padding: 0.8rem 0.6rem;
                     z-index: 10;
                 }
                     
                 .burger div {
-                    width: 1.5rem;
-                    height: 0.2rem;
+                    width: 100%;
+                    height: 4px;
                     border-radius: 10px;
                     transition: all 0.3s linear;
                     position: relative;
                     transform-origin: 1px;
-                    background-color: #B5B5B5;
+                    background-color: #718096;
                 }
                 .burger.white div{
                     background-color: white;

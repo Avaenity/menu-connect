@@ -9,9 +9,9 @@ export default function IndexPage({ setMenuOpen, menuOpen }) {
   
 
   return (
-    <div className="hero">
+    <div className="main-content">
       <HomeBanner />
-      <div className="main-content px-8">
+      <div className="px-8">
         <NavSlider />
         <h2 className="title text-xl font-semibold mb-4">Choisissez votre formule:</h2>
         <div className="card-container flex flex-col">
@@ -22,7 +22,7 @@ export default function IndexPage({ setMenuOpen, menuOpen }) {
         
       </div>
       <style jsx>{`
-        .hero {
+        .main-content {
           transition: filter 0.5s ease-in-out;
           filter: blur(${menuOpen ? "10px" : "0"});
         }

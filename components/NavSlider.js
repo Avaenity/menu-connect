@@ -9,11 +9,11 @@ export default function NavSlider() {
         <nav className="navslider -mx-8">
             <div className="nav-container overflow-hidden pt-5 pb-8 px-8 overflow-scroll">
                 <ul className="flex flew-col">
-                    <li className={`nav-item mr-10 relative ${activeItem == "Formules" ? "active font-semibold" : "text-gray-500"}`} name="Formules" onClick={() => { setActiveItem("Formules") }}>Formules</li>
-                    <li className={`nav-item mr-10 relative ${activeItem == "Entrées" ? "active font-semibold" : "text-gray-500"}`} name="Entrées" onClick={() => { setActiveItem("Entrées") }}>Entrées</li>
-                    <li className={`nav-item mr-10 relative ${activeItem == "Plats" ? "active font-semibold" : "text-gray-500"}`} name="Plats" onClick={() => { setActiveItem("Plats") }}>Plats</li>
-                    <li className={`nav-item mr-10 relative ${activeItem == "Desserts" ? "active font-semibold" : "text-gray-500"}`} name="Desserts" onClick={() => { setActiveItem("Desserts") }}>Desserts</li>
-                    <li className={`nav-item mr-10 relative ${activeItem == "Boissons" ? "active font-semibold" : "text-gray-500"}`} name="Boissons" onClick={() => { setActiveItem("Boissons") }}>Boissons</li>
+                    <li className={`nav-item mr-10 relative ${activeItem == "Formules" ? "active font-semibold" : "text-gray-600"}`} name="Formules" onClick={() => { setActiveItem("Formules") }}>Formules</li>
+                    <li className={`nav-item mr-10 relative ${activeItem == "Entrées" ? "active font-semibold" : "text-gray-600"}`} name="Entrées" onClick={() => { setActiveItem("Entrées") }}>Entrées</li>
+                    <li className={`nav-item mr-10 relative ${activeItem == "Plats" ? "active font-semibold" : "text-gray-600"}`} name="Plats" onClick={() => { setActiveItem("Plats") }}>Plats</li>
+                    <li className={`nav-item mr-10 relative ${activeItem == "Desserts" ? "active font-semibold" : "text-gray-600"}`} name="Desserts" onClick={() => { setActiveItem("Desserts") }}>Desserts</li>
+                    <li className={`nav-item mr-10 relative ${activeItem == "Boissons" ? "active font-semibold" : "text-gray-600"}`} name="Boissons" onClick={() => { setActiveItem("Boissons") }}>Boissons</li>
                 </ul>
             </div>
             <style jsx>{`

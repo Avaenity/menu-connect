@@ -2,7 +2,7 @@ export default function CardEvent () {
     return (
         <div className="card-event rounded-md bg-cover bg-center bg-no-repeat flex flex-col h-40 mb-6 relative">
             <div className="card-content absolute z-10">
-                <div className="event-date text-white text-sm uppercase mb-2 relative">
+                <div className="event-date text-white text-xs uppercase mb-2 relative">
                     7 juin
                 </div>
                 <div className="title-event text-white font-semibold">
