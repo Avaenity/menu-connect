@@ -7,7 +7,7 @@ export default function CardOrderContainer(props) {
     const router = useRouter()
     const category = router.query["category"]
 
-    //get types & items
+    //get items
     const items = []
     const getTypes = props.categoriesFoods.map(function(el, index) {
         if (Object.keys(el) == category){

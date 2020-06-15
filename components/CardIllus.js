@@ -1,14 +1,22 @@
-export default function CardIllus () {
+export default function CardIllus (props) {
+
+    const illuCard = {
+        streaming: "roomservice/tv.jpg",
+        taxi: "roomservice/taxi.jpg",
+        minibar: "roomservice/bar.jpg",
+        pressing: "roomservice/cleaning.jpg",
+        health: "roomservice/health.jpg",
+        roomservice: "roomservice/breakfast.jpg",
+        sightseeing: "roomservice/sightseeing.jpg"
+    }
+
     return (
         <div className="card-illus rounded-md shadow-md h-48">
-            <div className="illus bg-gray-800 h-32 rounded-t-md bg-no-repeat bg-center bg-cover"></div>
-            <div className="card-title text-left p-2">
-                <p className="text-xs font-semibold">Télévision et service VOD</p>
+            <div className="illus bg-gray-800 h-32 rounded-t-md bg-no-repeat bg-center bg-cover" style={{backgroundImage: "url(" + illuCard[props.item.type] + ")"}}></div>
+            <div className="card-title text-left p-4">
+                <p className="text-xs font-semibold">{props.item.nom}</p>
             </div>
             <style jsx>{`
-                .illus{
-                    background-image: url("roomservice/tv.jpg")
-                }
             `}</style>
         </div>
     )

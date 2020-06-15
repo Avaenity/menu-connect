@@ -75,6 +75,8 @@ function MyApp({ Component, pageProps }) {
 			.main-content{
 				height: calc(100vh - var(--tabnav-height));
 				overflow: hidden;
+				transition: filter 0.5s ease-in-out;
+                filter: blur(${menuOpen ? "10px" : "0"});
 			}
 		`}</style>
 		</Layout>

@@ -53,10 +53,6 @@ export default function Category (props) {
                 </div>
             </div>
             <style jsx>{`
-                .main-content{
-                    transition: filter 0.5s ease-in-out;
-                    filter: blur(${props.menuOpen ? "10px" : "0"});
-                }
                 .hero{
                     position: relative;
                     height: 20%;
