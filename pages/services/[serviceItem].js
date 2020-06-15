@@ -17,7 +17,7 @@ export default function Item (props) {
     //Get Info Services
     var infoService = props.categoriesServices[0]["Services en chambre"].filter(function(el){
             return (el.id == Object.values(router.query)[0])
-        })[0];
+    })[0];
 
     return (
         <div className="main-content relative">
@@ -59,3 +59,10 @@ export default function Item (props) {
         </div>
     )
 }
+
+export async function getServerSideProps(context) {
+    
+    return {
+      props: {}, // will be passed to the page component as props
+    }
+  }
