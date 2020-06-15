@@ -12,15 +12,16 @@ export default function Nav({ menuOpen, setMenuOpen }) {
   const hasWhiteBg = pageWhiteBg.includes(router.pathname)
 
   //Toggle class to change burger to back
-  const pageNeedBack = ['/[serviceItem]', '/[eventItem]']
+  const pageNeedBack = ['/services/[serviceItem]', '/events/[eventItem]']
   const hasBack = pageNeedBack.includes(router.pathname)
+  console.log(router)
 
   
   
 
   return (
     <nav>
-      <Burger menuOpen={menuOpen} setMenuOpen={setMenuOpen} isWhite={!hasWhiteBg} hasBack={hasBack}/>
+      <Burger menuOpen={menuOpen} setMenuOpen={setMenuOpen} isWhite={!hasWhiteBg} needBack={hasBack}/>
       <div className="search">
       <Search fill={hasWhiteBg ? '#718096' : 'white'}/>
       </div>

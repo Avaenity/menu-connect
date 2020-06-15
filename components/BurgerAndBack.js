@@ -1,19 +1,25 @@
-import { bool, func } from 'prop-types';
+//TODO: split burger and close into 2 components
+import { bool, func } from 'prop-types'
+import Back from '../components/svg/Back'
+import { useRouter } from 'next/router'
 
-const Burger = ({ menuOpen, setMenuOpen, isWhite, hasBack }) => {
+const Burger = ({ menuOpen, setMenuOpen, isWhite, needBack }) => {
+
+    const router = useRouter()
+
     return (
-        <div className="burger" open={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>
-            <div className={`burger-container${isWhite ? " white" : ""}${hasBack ? "" : " inactive"}`}>    
+        <div className="burgerAndBack">
+            <div className={`burger-container${isWhite ? " white" : ""}${needBack ? " inactive" : ""}`} open={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>    
                 <div />
                 <div />
                 <div />
             </div>
-            <div className={`burger-container ${isWhite ? "white" : ""}${hasBack ? " inactive" : ""}`}>
-
+            <div className={`burger-container ${isWhite ? "white" : ""}${needBack ? "" : " inactive"}`}>
+                <Back fill={isWhite ? "white" : "#718096"} onClick={() => router.back()}/>
             </div>
 
             <style jsx>{`
-                .burger {
+                .burgerAndBack {
                     position: absolute;
                     top: 2rem;
                     left: 2rem;
