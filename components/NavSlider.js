@@ -6,8 +6,8 @@ export default function NavSlider() {
     const [activeItem, setActiveItem] = useState("Formules")
     
     return (
-        <nav className="navslider -mx-8">
-            <div className="nav-container overflow-hidden pt-5 pb-8 px-8 overflow-scroll">
+        <nav className="navslider">
+            <div className="nav-container overflow-hidden pt-5 pb-8 px-8 overflow-scroll relative">
                 <ul className="flex flew-col">
                     <li className={`nav-item mr-10 relative ${activeItem == "Formules" ? "active font-semibold" : "text-gray-600"}`} name="Formules" onClick={() => { setActiveItem("Formules") }}>Formules</li>
                     <li className={`nav-item mr-10 relative ${activeItem == "Entrées" ? "active font-semibold" : "text-gray-600"}`} name="Entrées" onClick={() => { setActiveItem("Entrées") }}>Entrées</li>
@@ -26,6 +26,7 @@ export default function NavSlider() {
                 .nav-container::-webkit-scrollbar{
                     display: none;
                 }
+                
                 .nav-item {
                     text-shadow: 2px 2px 4px rgba(150, 150, 150, 0.3);
                 }

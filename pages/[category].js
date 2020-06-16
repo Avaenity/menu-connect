@@ -45,11 +45,12 @@ export default function Category (props) {
                         <div className="pb-8">
                             {
                                 types.map(function(el, index) {
-                                    return <div key={index} className="pb-4">
+                                    return (
+                                    <div key={index} className="pb-4">
                                         <h2 className="text-lg font-semibold mb-2 uppercase">{el}</h2>
                                         <CardOrderContainer types={el} categoriesFoods={props.categoriesFoods}/>
                                     </div>
-                                })
+                                )})
                             }
                         </div>
                     }
