@@ -1,19 +1,26 @@
 import Link from 'next/link';
 import React, { useState } from 'react';
 
-export default function NavSlider() {
+export default function NavSlider(props) {
 
     const [activeItem, setActiveItem] = useState("Formules")
+    console.log(props.categories)
     
     return (
         <nav className="navslider">
             <div className="nav-container overflow-hidden pt-5 pb-8 px-8 overflow-scroll relative">
                 <ul className="flex flew-col">
-                    <li className={`nav-item mr-10 relative ${activeItem == "Formules" ? "active font-semibold" : "text-gray-600"}`} name="Formules" onClick={() => { setActiveItem("Formules") }}>Formules</li>
-                    <li className={`nav-item mr-10 relative ${activeItem == "Entrées" ? "active font-semibold" : "text-gray-600"}`} name="Entrées" onClick={() => { setActiveItem("Entrées") }}>Entrées</li>
-                    <li className={`nav-item mr-10 relative ${activeItem == "Plats" ? "active font-semibold" : "text-gray-600"}`} name="Plats" onClick={() => { setActiveItem("Plats") }}>Plats</li>
-                    <li className={`nav-item mr-10 relative ${activeItem == "Desserts" ? "active font-semibold" : "text-gray-600"}`} name="Desserts" onClick={() => { setActiveItem("Desserts") }}>Desserts</li>
-                    <li className={`nav-item mr-10 relative ${activeItem == "Boissons" ? "active font-semibold" : "text-gray-600"}`} name="Boissons" onClick={() => { setActiveItem("Boissons") }}>Boissons</li>
+                    {
+                        props.categories.map(function (el,i){
+                            return (
+                                <li className="nav-item pr-10" name={el} onClick={() => { setActiveItem(el) }} key={i}>
+                                    <a className={`item relative ${activeItem == el ? "active font-semibold" : "text-gray-600"}`}>
+                                        {el}
+                                    </a>
+                                </li>
+                            )
+                        })
+                    }
                 </ul>
             </div>
             <style jsx>{`
@@ -27,13 +34,13 @@ export default function NavSlider() {
                     display: none;
                 }
                 
-                .nav-item {
+                .item {
                     text-shadow: 2px 2px 4px rgba(150, 150, 150, 0.3);
                 }
-                .nav-item.active{
+                .item.active{
                     text-shadow: none;
                 }
-                .nav-item.active:after{
+                .item.active:after{
                     position: absolute;
                     bottom: -5px;
                     left: 0;

@@ -6,24 +6,23 @@ import Card from '../components/Card'
 
 export default function IndexPage({ setMenuOpen, menuOpen, categoriesFoods }) {
 
-const types = []
-	const items = []
-	categoriesFoods.map(function(el, index) {
-		console.log (Object.keys(el))
+
+	const categories = categoriesFoods.map(function(el, index) {
+		return Object.keys(el).toString()
 	})
 
 return (
 	<div className="main-content">
 		<div className="hero relative">
 			<HomeBanner />
-			<NavSlider />
+			<NavSlider categories={categories}/>
 		</div>
 		<div className="card-container flex flex-col px-8 overflow-scroll pt-6">
 			{
 				categoriesFoods.map(function(el, i) {
 					return (
 						<div key={i} className="pb-4">
-							<h2 className="text-lg font-semibold mb-2 uppercase" id={Object.keys(el)}>{Object.keys(el)}</h2>
+							<h2 className="category text-lg font-semibold mb-2 uppercase" id={Object.keys(el)}>{Object.keys(el)}</h2>
 							{
 								el[Object.keys(el)].map (function(itm,index){
 									return <Card key={index} infoItem={itm}/>
