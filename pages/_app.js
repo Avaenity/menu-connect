@@ -68,7 +68,6 @@ function MyApp({ Component, pageProps }) {
 				}
 				html {
 					background: linear-gradient(#FFFFFF, #F7F7F7);
-					height: 100vh;
 					color: #484848;
 				}
 				p, li {
