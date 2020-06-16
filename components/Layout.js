@@ -19,8 +19,3 @@ export default function Layout(props) {
         </div>
     )
 }
-Layout.propTypes = {
-    menuOpen: bool.isRequired,
-    tabActive: string.isRequired,
-    setTabActive: func.isRequired
-};

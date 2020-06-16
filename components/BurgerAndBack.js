@@ -58,9 +58,5 @@ const Burger = ({ menuOpen, setMenuOpen, isWhite, needBack }) => {
     )
 }
 
-Burger.propTypes = {
-    menuOpen: bool.isRequired,
-    setMenuOpen: func.isRequired,
-};
 
 export default Burger;

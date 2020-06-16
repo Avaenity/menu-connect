@@ -62,9 +62,3 @@ export default function TabNav({ menuOpen, tabActive, setTabActive }) {
         </div>
     )
 }
-
-TabNav.propTypes = {
-    menuOpen: bool.isRequired,
-    tabActive: string.isRequired,
-    setTabActive: func.isRequired
-};
