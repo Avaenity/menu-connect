@@ -3,6 +3,7 @@ import Layout from '../components/Layout'
 import React, { useState } from 'react'
 import DataJSON from '../data.json';
 import TabNav from '../components/TabNav'
+import Div100vh from 'react-div-100vh'
 
 function MyApp({ Component, pageProps }) {
 
@@ -38,48 +39,50 @@ function MyApp({ Component, pageProps }) {
 	const [tabActive, setTabActive] = useState("home");
 
 	return (
-		<Layout
-			menuOpen={menuOpen}
-			setMenuOpen={setMenuOpen}
-			tabActive={tabActive}
-			setTabActive={setTabActive}
-			categoriesFoods={categoriesFoods}
-			categoriesServices={categoriesServices}
-			categoriesEvents={categoriesEvents}
-			infosRestaurant={infosRestaurant}
-		>
-		<Component {...pageProps} 
-			menuOpen={menuOpen} 
-			setMenuOpen={setMenuOpen} 
-			categoriesFoods={categoriesFoods}
-			categoriesServices={categoriesServices}
-			categoriesEvents={categoriesEvents}
-			infosRestaurant={infosRestaurant}/>
-		<TabNav 
-			menuOpen={menuOpen} 
-			tabActive={tabActive} 
-			setTabActive={setTabActive}/>
-		<style jsx global>{`
+		<Div100vh>
+			<Layout
+				menuOpen={menuOpen}
+				setMenuOpen={setMenuOpen}
+				tabActive={tabActive}
+				setTabActive={setTabActive}
+				categoriesFoods={categoriesFoods}
+				categoriesServices={categoriesServices}
+				categoriesEvents={categoriesEvents}
+				infosRestaurant={infosRestaurant}
+			>
+			<Component {...pageProps} 
+				menuOpen={menuOpen} 
+				setMenuOpen={setMenuOpen} 
+				categoriesFoods={categoriesFoods}
+				categoriesServices={categoriesServices}
+				categoriesEvents={categoriesEvents}
+				infosRestaurant={infosRestaurant}/>
+			<TabNav 
+				menuOpen={menuOpen} 
+				tabActive={tabActive} 
+				setTabActive={setTabActive}/>
+			<style jsx global>{`
 
-			:root{
-				--tabnav-height: 6rem;
-			}
-			html {
-				background: linear-gradient(#FFFFFF, #F7F7F7);
-				height: 100vh;
-				color: #484848;
-			}
-			p, li {
-				font-size: 1.125rem;
-			}
-			.main-content{
-				height: calc(100vh - var(--tabnav-height));
-				overflow: hidden;
-				transition: filter 0.5s ease-in-out;
-                filter: blur(${menuOpen ? "10px" : "0"});
-			}
-		`}</style>
-		</Layout>
+				:root{
+					--tabnav-height: 6rem;
+				}
+				html {
+					background: linear-gradient(#FFFFFF, #F7F7F7);
+					height: 100vh;
+					color: #484848;
+				}
+				p, li {
+					font-size: 1.125rem;
+				}
+				.main-content{
+					height: calc(100vh - var(--tabnav-height));
+					overflow: hidden;
+					transition: filter 0.5s ease-in-out;
+					filter: blur(${menuOpen ? "10px" : "0"});
+				}
+			`}</style>
+			</Layout>
+		</Div100vh>
 	)
 }
 
