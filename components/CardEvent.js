@@ -4,7 +4,7 @@ export default function CardEvent (props) {
 
     var months = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
     //TODO: {new Date(props.info.date).getUTCDate()+1} +1 because json from spreadsheet took of a day
-    console.log(new Date(props.info.date).toISOString())
+    
     return (
         <Link href="/events/[eventItem]" as={`/events/${props.info.id}`}>
             <div className="card-event rounded-md bg-cover bg-center bg-no-repeat flex flex-col h-40 mb-6 relative" style={{backgroundImage: "url(/event/" + props.info.image + ")"}}>

@@ -14,7 +14,7 @@ export default function Nav({ menuOpen, setMenuOpen }) {
   //Toggle class to change burger to back
   const pageNeedBack = ['/services/[serviceItem]', '/events/[eventItem]']
   const hasBack = pageNeedBack.includes(router.pathname)
-  console.log(router)
+  
 
   
   
