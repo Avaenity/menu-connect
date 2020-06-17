@@ -17,6 +17,7 @@
     "react-dom": "^16.12.0",
     "react-intersection-observer": "^8.26.2",
     "react-scroll": "^1.7.16",
+    "react-use-gesture": "^7.0.15",
     "sass": "^1.26.8"
   },
   "devDependencies": {
