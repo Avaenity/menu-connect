@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import DataJSON from '../data.json';
 import TabNav from '../components/TabNav'
 import Div100vh from 'react-div-100vh'
-import { enableBodyScrollgit } from 'body-scroll-lock';
+import { enableBodyScroll } from 'body-scroll-lock';
 
 function MyApp({ Component, pageProps }) {
 
