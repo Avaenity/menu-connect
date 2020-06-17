@@ -2,20 +2,27 @@ import { func,bool } from 'prop-types';
 import HomeBanner from '../components/HomeBanner'
 import NavSlider from '../components/NavSlider'
 import Card from '../components/Card'
+import React, { useState } from 'react';
+import { InView } from 'react-intersection-observer'
 
 
 export default function IndexPage({ setMenuOpen, menuOpen, categoriesFoods }) {
 
+	//Active for NavSlider
+	const [activeItem, setActiveItem] = useState("Formules")
 
 	const categories = categoriesFoods.map(function(el, index) {
 		return Object.keys(el).toString()
 	})
 
+	//Intersection Observer
+	//TODO: Intersection observer for nav slider depending on card-container
+
 return (
 	<div className="main-content">
 		<div className="hero relative">
 			<HomeBanner />
-			<NavSlider categories={categories}/>
+			<NavSlider categories={categories} activeItem={activeItem} setActiveItem={setActiveItem}/>
 		</div>
 		<div className="card-container flex flex-col px-8 overflow-scroll pt-6" id="card-container">
 			{

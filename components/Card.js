@@ -8,7 +8,7 @@ export default function Card(props) {
                     </div>
                 </div>
             </div>
-            <div className="dish-desc flex-grow">
+            <div className="dish-desc pr-4 flex-grow">
                 <p className="dish-name text-base font-semibold pb-2">{props.infoItem.nom}</p>
                 <p className="dish-ing text-sm italic text-gray-600">{props.infoItem.ingredients}</p>
             </div>
