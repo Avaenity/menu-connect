@@ -1,30 +1,16 @@
-import { motion, useAnimation } from 'framer-motion'
+import { useSpring, animated } from 'react-spring'
 import { useDrag } from 'react-use-gesture'
 
 export default function CardOrder(props) {
 
-    const animation = useAnimation({
-        x: 0,
-        transition: {
-          type: "spring",
-          stiffness: 1,
-        },
-      });
-      const bind = useDrag(
-        (state) => {
-          if (state.dragging) {
-            animation.start({ x: state.movement[0] });
-          } else {
-            animation.start({ x: 0 });
-          }
-        },
-        {
-          axis: "x",
-        }
-      );
+    const [{ x }, set] = useSpring(() => ({ x: 0 }))
+    const bind = useDrag(({ down, movement: [mx], cancel }) => {
+        if (mx > 150 || mx < -150) cancel()
+        set({ x: down ? mx : 0, immediate: down })
+    })
 
     return (
-        <motion.div className="card-order p-4 mb-8 rounded shadow-md flex flex-row relative" {...bind()} animate={animation}>
+        <animated.div className="card-order p-4 mb-8 rounded shadow-md flex flex-row relative" {...bind()} style={{ x }}>
             <div className="bulle-container absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2">
                 <div className="bulle relative">
                     <div className="qty-container w-5 h-5 rounded-full text-center relative">
@@ -48,6 +34,6 @@ export default function CardOrder(props) {
                     left: 50%;
                 }
             `}</style>
-        </motion.div>
+        </animated.div>
     )
 }
