@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 export default function CardOrder(props) {
 
     return (
-        <motion.div className="card-order p-4 mb-8 rounded shadow-md flex flex-row relative" drag="x" dragConstraints={{ left: 0, right: 0 }} dragElastic={0.2} onDrag={(event, info) => console.log(info.point.x, info.point.y)}>
+        <motion.div className="card-order p-4 mb-8 rounded shadow-md flex flex-row relative" drag="x" dragConstraints={{ left: 0, right: 0 }} dragElastic={0.2} dragMomentum={false} onDrag={(event, info) => console.log(info.point.x, info.point.y)}>
             <div className="bulle-container absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2">
                 <div className="bulle relative">
                     <div className="qty-container w-5 h-5 rounded-full text-center relative">
