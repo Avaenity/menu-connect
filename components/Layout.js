@@ -3,9 +3,12 @@ import TabNav from './TabNav';
 import Nav from './Nav';
 import Menu from '../components/Menu';
 
+import Div100vh from 'react-div-100vh'
+
 export default function Layout(props) {
     return (
-        <div className="Layout" >
+        
+		<Div100vh>
             <Nav menuOpen={props.menuOpen} setMenuOpen={props.setMenuOpen}/>
             <Menu 
                 menuOpen={props.menuOpen}
@@ -16,6 +19,6 @@ export default function Layout(props) {
                 infosRestaurant={props.infosRestaurant}
             />
             {props.children}
-        </div>
+        </Div100vh>
     )
 }
