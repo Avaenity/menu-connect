@@ -3,11 +3,14 @@ import { useGesture } from 'react-use-gesture'
 
 export default function CardOrder(props) {
 
+    // inspired from https://use-gesture.netlify.app/docs/hooks#start-and-end-handlers + https://use-gesture.netlify.app/docs/state#cancel
+    // useGesture handle multiple state
     const [{ x }, set] = useSpring(() => ({ x: 0 }))
     const bind = useGesture({
         onDrag: (({ down, movement: [mx], cancel }) => {
             if (mx > 150 || mx < -150) cancel()
             set({ x: down ? mx : 0, immediate: down })
+            console.log(mx)
         }),
         onDragEnd: ({movement: [mx]}) => {
             if (mx < 0){
@@ -17,6 +20,7 @@ export default function CardOrder(props) {
             }
         }
     })
+    
 
     return (
         <animated.div className="card-order p-4 mb-8 rounded shadow-md flex flex-row relative" {...bind()} style={{ x , touchAction: 'pan-y' }}>
