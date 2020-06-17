@@ -1,28 +1,30 @@
+import { motion, git add .useAnimation } from 'framer-motion'
 import { useDrag } from 'react-use-gesture'
-import { motion, useAnimation } from "framer-motion"
-import React, { useState, useEffect } from 'react';
 
 export default function CardOrder(props) {
 
-    const [allowScroll, setAllowScroll] = useState(false)
-    useEffect(() => {
-        if (allowScroll) {
-        const handleTouch = event => {
-            event.stopPropagation()
+    const animation = useAnimation({
+        x: 0,
+        transition: {
+          type: "spring",
+          stiffness: 1,
+        },
+      });
+      const bind = useDrag(
+        (state) => {
+          if (state.dragging) {
+            animation.start({ x: state.movement[0] });
+          } else {
+            animation.start({ x: 0 });
+          }
+        },
+        {
+          axis: "x",
         }
-        document.documentElement.addEventListener('touchmove', handleTouch)
-        return () => {
-            document.documentElement.removeEventListener('touchmove', handleTouch)
-        }
-        }
-    }, [allowScroll])
-
-    function onDrag(event, info) {
-        console.log(info.point.x)
-    }
+      );
 
     return (
-        <motion.div className="card-order p-4 mb-8 rounded shadow-md flex flex-row relative" drag="x" dragConstraints={{ left: 0, right: 0 }} onDrag={onDrag} onDragStart={(event, info) => {setAllowScroll(Math.abs(info.delta.y) > Math.abs(info.delta.x))}}>
+        <motion.div className="card-order p-4 mb-8 rounded shadow-md flex flex-row relative" {...bind()} animate={animation}>
             <div className="bulle-container absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2">
                 <div className="bulle relative">
                     <div className="qty-container w-5 h-5 rounded-full text-center relative">
