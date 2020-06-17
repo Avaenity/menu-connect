@@ -1,4 +1,4 @@
-import { motion, git add .useAnimation } from 'framer-motion'
+import { motion, useAnimation } from 'framer-motion'
 import { useDrag } from 'react-use-gesture'
 
 export default function CardOrder(props) {
