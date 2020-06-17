@@ -3,7 +3,6 @@ import HomeBanner from '../components/HomeBanner'
 import NavSlider from '../components/NavSlider'
 import CardOrder from '../components/CardOrder'
 import React, { useState } from 'react';
-import { InView } from 'react-intersection-observer'
 
 
 export default function IndexPage({ setMenuOpen, menuOpen, categoriesFoods }) {

@@ -1,12 +1,21 @@
 import { useSpring, animated } from 'react-spring'
-import { useDrag } from 'react-use-gesture'
+import { useGesture } from 'react-use-gesture'
 
 export default function CardOrder(props) {
 
     const [{ x }, set] = useSpring(() => ({ x: 0 }))
-    const bind = useDrag(({ down, movement: [mx], cancel }) => {
-        if (mx > 150 || mx < -150) cancel()
-        set({ x: down ? mx : 0, immediate: down })
+    const bind = useGesture({
+        onDrag: (({ down, movement: [mx], cancel }) => {
+            if (mx > 150 || mx < -150) cancel()
+            set({ x: down ? mx : 0, immediate: down })
+        }),
+        onDragEnd: ({movement: [mx]}) => {
+            if (mx < 0){
+                console.log ("+1"+props.infoItem.id)
+            } else {
+                console.log ("-1"+props.infoItem.id)
+            }
+        }
     })
 
     return (
