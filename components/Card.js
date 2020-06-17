@@ -3,8 +3,8 @@ export default function Card(props) {
         <div className="card p-4 mb-8 rounded shadow-md flex flex-row relative">
             <div className="bulle-container absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2">
                 <div className="bulle relative">
-                    <div className="qty-container w-4 h-4 rounded-full text-center relative">
-                        <span className="qty absolute transform -translate-x-1/2 text-xs text-white font-semibold">1</span>
+                    <div className="qty-container w-5 h-5 rounded-full text-center relative">
+                        <span className="qty absolute transform -translate-x-1/2 -translate-y-1/2 text-xs text-white font-semibold">1</span>
                     </div>
                 </div>
             </div>
@@ -18,6 +18,10 @@ export default function Card(props) {
             <style jsx>{`
                 .qty-container{
                     background-color: #247BA0;
+                }
+                .qty{
+                    top: 50%;
+                    left: 50%;
                 }
             `}</style>
         </div>

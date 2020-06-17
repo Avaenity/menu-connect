@@ -23,12 +23,23 @@ return (
 		<div className="hero relative">
 			<HomeBanner />
 			<NavSlider categories={categories} activeItem={activeItem} setActiveItem={setActiveItem}/>
+			<div className="info-bulle flex flex-row mt-4 px-8">
+				<div className="bulle relative pb-8 mr-2">
+					<div className="w-4 h-4 rounded-full bg-gray-500 text-center relative">
+					<span className="absolute transform -translate-x-1/2 text-xs text-white font-semibold">i</span>
+					</div>
+				</div>
+				<ul>
+					<li className="text-tiny text-gray-600">Glissez à gauche pour ajouter un plat</li>
+					<li className="text-tiny text-gray-600">Glissez à droite pour le retirer </li>
+				</ul>
+			</div>
 		</div>
 		<div className="card-container flex flex-col px-8 overflow-scroll pt-6" id="card-container">
 			{
 				categoriesFoods.map(function(el, i) {
 					return (
-						<div key={i} className="pb-4">
+						<div key={i}>
 							<h2 className="category text-lg font-semibold mb-2 uppercase pt-2" id={Object.keys(el)}>{Object.keys(el)}</h2>
 							{
 								el[Object.keys(el)].map (function(itm,index){
@@ -47,10 +58,10 @@ return (
 			filter: blur(${menuOpen ? "10px" : "0"});
 			}
 			.hero {
-				height: 40%;
+				height: 45%;
 			}
 			.card-container{
-				height: 60%;
+				height: 55%;
 			}
 			.hero::after{
 				content:"";
