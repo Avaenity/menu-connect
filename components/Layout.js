@@ -8,7 +8,7 @@ import Div100vh from 'react-div-100vh'
 export default function Layout(props) {
     return (
         
-		<Div100vh>
+		<Div100vh className="overflow-hidden">
             <Nav menuOpen={props.menuOpen} setMenuOpen={props.setMenuOpen}/>
             <Menu 
                 menuOpen={props.menuOpen}
