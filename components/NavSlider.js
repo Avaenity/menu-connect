@@ -1,10 +1,9 @@
-import Link from 'next/link';
 import React, { useState } from 'react';
+import { Link } from "react-scroll";
 
 export default function NavSlider(props) {
 
     const [activeItem, setActiveItem] = useState("Formules")
-    console.log(props.categories)
     
     return (
         <nav className="navslider">
@@ -13,11 +12,11 @@ export default function NavSlider(props) {
                     {
                         props.categories.map(function (el,i){
                             return (
-                                <li className="nav-item pr-10" name={el} onClick={() => { setActiveItem(el) }} key={i}>
-                                    <a className={`item relative ${activeItem == el ? "active font-semibold" : "text-gray-600"}`}>
+                                <Link className="nav-item pr-10" name={el} onClick={() => { setActiveItem(el) }} key={i} to={el} spy={true} smooth={true} duration={500} containerId="card-container">
+                                    <span className={`item relative ${activeItem == el ? "active font-semibold" : "text-gray-600"}`}>
                                         {el}
-                                    </a>
-                                </li>
+                                    </span>
+                                </Link>
                             )
                         })
                     }

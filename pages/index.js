@@ -17,12 +17,12 @@ return (
 			<HomeBanner />
 			<NavSlider categories={categories}/>
 		</div>
-		<div className="card-container flex flex-col px-8 overflow-scroll pt-6">
+		<div className="card-container flex flex-col px-8 overflow-scroll pt-6" id="card-container">
 			{
 				categoriesFoods.map(function(el, i) {
 					return (
 						<div key={i} className="pb-4">
-							<h2 className="category text-lg font-semibold mb-2 uppercase" id={Object.keys(el)}>{Object.keys(el)}</h2>
+							<h2 className="category text-lg font-semibold mb-2 uppercase pt-2" id={Object.keys(el)}>{Object.keys(el)}</h2>
 							{
 								el[Object.keys(el)].map (function(itm,index){
 									return <Card key={index} infoItem={itm}/>
