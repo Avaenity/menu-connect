@@ -10,7 +10,7 @@ export default function CardOrder(props) {
     })
 
     return (
-        <animated.div className="card-order p-4 mb-8 rounded shadow-md flex flex-row relative" {...bind()} style={{ x }}>
+        <animated.div className="card-order p-4 mb-8 rounded shadow-md flex flex-row relative" {...bind()} style={{ x , touchAction: 'pan-y' }}>
             <div className="bulle-container absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2">
                 <div className="bulle relative">
                     <div className="qty-container w-5 h-5 rounded-full text-center relative">
