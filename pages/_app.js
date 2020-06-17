@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import DataJSON from '../data.json';
 import TabNav from '../components/TabNav'
 import Div100vh from 'react-div-100vh'
+import { enableBodyScrollgit } from 'body-scroll-lock';
 
 function MyApp({ Component, pageProps }) {
 
@@ -37,6 +38,11 @@ function MyApp({ Component, pageProps }) {
 
 	const [menuOpen, setMenuOpen] = useState(false);
 	const [tabActive, setTabActive] = useState("home");
+
+	React.useEffect(() => {
+		enableBodyScroll(document.body);
+		document.getElementsByTagName("html")[0].style = "";
+	}, []);
 
 	return (
 		<Div100vh>
