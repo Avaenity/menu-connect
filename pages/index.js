@@ -1,7 +1,7 @@
 import { func,bool } from 'prop-types';
 import HomeBanner from '../components/HomeBanner'
 import NavSlider from '../components/NavSlider'
-import Card from '../components/Card'
+import CardOrder from '../components/CardOrder'
 import React, { useState } from 'react';
 import { InView } from 'react-intersection-observer'
 
@@ -43,7 +43,7 @@ return (
 							<h2 className="category text-lg font-semibold mb-2 uppercase pt-2" id={Object.keys(el)}>{Object.keys(el)}</h2>
 							{
 								el[Object.keys(el)].map (function(itm,index){
-									return <Card key={index} infoItem={itm}/>
+									return <CardOrder key={index} infoItem={itm}/>
 								})
 							}
 						</div>
