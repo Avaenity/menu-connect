@@ -2,7 +2,8 @@ module.exports = {
 	purge: ['./components/**/*.js', './pages/**/*.js'],
 	theme: {
 		fontSize: {
-			'xs': '.75rem',
+			'2xs': '.60rem',
+			'xs': '.70rem',
 			'tiny': '.85rem',
 			'sm': '.9rem',
 			'base': '1rem',
