@@ -61,13 +61,13 @@ export default function Order({order, setOrder, tipsSentences}) {
                             }
                         </div>
                     }
-					<div className="order-summary h-full mb-8">
+					<div className="order-summary mb-8">
 						{
 							order.length < 1 
-							? <div className="h-full flex flex-col justify-around">
-								<div>
+							? <div className="flex flex-col justify-center">
+								<div className="pb-16">
 									<p className="text-center">😦</p>
-									<h2 className="text-lg italic text-center font-semibold text-gray-600 pb-4">Aucune commande pour le moment</h2>
+									<h2 className="text-lg italic text-center font-semibold text-gray-600">Aucune commande pour le moment</h2>
 								</div>
 								<div>
 									<p className="text-base text-center italic text-gray-600 pb-2">Un petit secret :</p>
