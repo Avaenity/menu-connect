@@ -17,16 +17,9 @@ export default function CardOrder({infoItem, order, setOrder}) {
         }),
         onDragEnd: ({movement: [mx]}) => {
             if (mx < 0){
-                addItemToOrder(infoItem)
-                console.log(order)
+                addItemToOrder()
             } else {
-                // get index of object with id
-                var removeIndex = order.map(function(item) { return item.id; }).indexOf(infoItem.id);
-                // remove object
-                if (removeIndex != -1){
-                    order.splice(removeIndex, 1);
-                }
-                
+                removeItemToOrder()
             }
         }
     })
@@ -36,17 +29,24 @@ export default function CardOrder({infoItem, order, setOrder}) {
     const count = order.filter((obj) => obj.id === id).length;
     
     //Add to Order
-    function addItemToOrder(item) {
-        setOrder(order => [...order, item]);
+    function addItemToOrder() {
+        setOrder(order => [...order, infoItem]);
     }
 
     //Remove from order
-    function removeItemToOrder(item) {
-        setOrder(order => [...order, item]);
+    function removeItemToOrder() {
+        // make a separate copy of the array
+        var array = order; 
+         // get index of object with id
+        var removeIndex = array.map(function(item) { return item.id; }).indexOf(infoItem.id);
+        // remove object
+        if (removeIndex !== -1) {
+            array.splice(removeIndex, 1);
+            // set new order
+            setOrder(order =>[...order, array]);
+        }
     }
-    
-    
- 
+
     return (
         <div className="under-card relative">
             <div className="add-order h-full absolute bg-green-500 top-0 right-0 rounded border-2 border-solid border-white"><div className="icon icon-plus absolute right-0 mr-6"><Plus fill="white" width="2rem"/></div></div>
