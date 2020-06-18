@@ -1,6 +1,6 @@
 import '../styles/index.css'
 import Layout from '../components/Layout'
-import React, { useState } from 'react'
+import { useState } from 'react'
 import DataJSON from '../data.json';
 import TabNav from '../components/TabNav'
 
@@ -37,6 +37,7 @@ function MyApp({ Component, pageProps }) {
 
 	const [menuOpen, setMenuOpen] = useState(false);
 	const [tabActive, setTabActive] = useState("home");
+	const [order, setOrder] = useState([]);
 
 
 	return (
@@ -57,6 +58,8 @@ function MyApp({ Component, pageProps }) {
 				categoriesServices={categoriesServices}
 				categoriesEvents={categoriesEvents}
 				infosRestaurant={infosRestaurant}
+				order={order}
+				setOrder={setOrder}
 				/>
 			<TabNav 
 				menuOpen={menuOpen} 

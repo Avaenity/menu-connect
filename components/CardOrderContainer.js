@@ -26,7 +26,7 @@ export default function CardOrderContainer(props) {
         <div className="card-container">
             {
                 itemfiltered.map(function(el, i){
-                    return <CardOrder infoItem={el} key={i}/>
+                    return <CardOrder order={props.order} setOrder={props.setOrder} infoItem={el} key={i}/>
                 })
             }
             <style jsx>{`

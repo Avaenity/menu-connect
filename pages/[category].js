@@ -48,7 +48,7 @@ export default function Category (props) {
                                     return (
                                     <div key={index} className="pb-4">
                                         <h2 className="text-lg font-semibold mb-2 uppercase">{el}</h2>
-                                        <CardOrderContainer types={el} categoriesFoods={props.categoriesFoods}/>
+                                        <CardOrderContainer order={props.order} setOrder={props.setOrder} types={el} categoriesFoods={props.categoriesFoods}/>
                                     </div>
                                 )})
                             }
