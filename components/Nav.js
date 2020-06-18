@@ -8,7 +8,7 @@ export default function Nav({ menuOpen, setMenuOpen }) {
   const router = useRouter()
   
   //Toggle class to change icon color
-  const pageWhiteBg = ['/[category]', '/events', '/services', '/welcome']
+  const pageWhiteBg = ['/[category]', '/events', '/services', '/welcome', '/order']
   const hasWhiteBg = pageWhiteBg.includes(router.pathname)
 
   //Toggle class to change burger to back

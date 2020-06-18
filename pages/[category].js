@@ -30,7 +30,7 @@ export default function Category (props) {
                     <div className="info-bulle flex flex-row mt-4">
                         <div className="bulle relative mr-2">
                             <div className="w-4 h-4 rounded-full bg-gray-500 text-center relative">
-                            <span className="absolute transform -translate-x-1/2 text-xs text-white font-semibold">i</span>
+                                <span className="absolute transform -translate-x-1/2 text-xs text-white font-semibold">i</span>
                             </div>
                         </div>
                         <ul>
