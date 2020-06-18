@@ -5,7 +5,7 @@ import CardOrder from '../components/CardOrder'
 import React, { useState } from 'react';
 
 
-export default function IndexPage({ setMenuOpen, menuOpen, categoriesFoods, order }) {
+export default function IndexPage({ setMenuOpen, menuOpen, categoriesFoods, order, setOrder }) {
 
 	//Active for NavSlider
 	const [activeItem, setActiveItem] = useState("Formules")
@@ -42,7 +42,7 @@ return (
 							<h2 className="category text-lg font-semibold mb-2 uppercase pt-2" id={Object.keys(el)}>{Object.keys(el)}</h2>
 							{
 								el[Object.keys(el)].map (function(itm,index){
-									return <CardOrder key={index} infoItem={itm}/>
+									return <CardOrder order={order} setOrder={setOrder} key={index} infoItem={itm}/>
 								})
 							}
 						</div>
