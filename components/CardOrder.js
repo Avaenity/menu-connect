@@ -43,7 +43,7 @@ export default function CardOrder({infoItem, order, setOrder}) {
         if (removeIndex !== -1) {
             array.splice(removeIndex, 1);
             // set new order
-            setOrder(order =>[...order, array]);
+            setOrder([...order]);
         }
     }
 

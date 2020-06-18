@@ -4,14 +4,16 @@ import Link from 'next/link'
 import Place from '../components/svg/Place'
 import Home from '../components/svg/Home'
 import Order from '../components/svg/Order'
+import QttyBubble from '../components/QttyBulle'
 
 
-export default function TabNav({ menuOpen, tabActive, setTabActive }) {
+export default function TabNav({ menuOpen, tabActive, setTabActive, order }) {
 
     function isActive (tabName) {
         return tabName == tabActive
-    } 
-
+    }
+    
+    
     return (
         <div className="tabnav w-full fixed bottom-0 flex flex-row justify-around bg-white">
             <Link href="/welcome">
@@ -23,12 +25,14 @@ export default function TabNav({ menuOpen, tabActive, setTabActive }) {
             <Link href="/">
                 <div className={`svg relative flex flex-col justify-center ${isActive('home') ? "active" : ""}`} data-name="home" onClick={(e) => setTabActive(e.currentTarget.dataset.name)}>
                 {/* TODO find a way to pass data-name in isActive() */}
+                    { order.length > 0 ? <QttyBubble Qtty={order.length}/> : "" }
                     <Home fill={`${isActive('home') ? "#247BA0" : "#718096"}`} width={`${isActive('home') ? "35px" : "25px"}`}/>
                 </div>
             </Link>
             <Link href="/order">
                 <div className={`svg relative flex flex-col justify-center ${isActive('order') ? "active" : ""}`} data-name="order" onClick={(e) => setTabActive(e.currentTarget.dataset.name)}>
                 {/* TODO find a way to pass data-name in isActive() */}
+
                     <Order fill={`${isActive('order') ? "#247BA0" : "#718096"}`} width={`${isActive('order') ? "30px" : "20px"}`}/>
                 </div>
             </Link>

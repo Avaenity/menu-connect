@@ -38,6 +38,7 @@ function MyApp({ Component, pageProps }) {
 	const [menuOpen, setMenuOpen] = useState(false);
 	const [tabActive, setTabActive] = useState("home");
 	const [order, setOrder] = useState([]);
+	console.log(order)
 
 
 	return (
@@ -65,6 +66,7 @@ function MyApp({ Component, pageProps }) {
 				menuOpen={menuOpen} 
 				tabActive={tabActive} 
 				setTabActive={setTabActive}
+				order={order}
 				/>
 			<style jsx global>{`
 
