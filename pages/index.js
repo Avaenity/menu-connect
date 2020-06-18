@@ -5,7 +5,7 @@ import CardOrder from '../components/CardOrder'
 import React, { useState } from 'react';
 
 
-export default function IndexPage({ setMenuOpen, menuOpen, categoriesFoods }) {
+export default function IndexPage({ setMenuOpen, menuOpen, categoriesFoods, order }) {
 
 	//Active for NavSlider
 	const [activeItem, setActiveItem] = useState("Formules")

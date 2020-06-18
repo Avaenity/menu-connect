@@ -2,9 +2,11 @@ import { useSpring, animated } from 'react-spring'
 import { useGesture } from 'react-use-gesture'
 import Plus from '../components/svg/Plus'
 import Minus from '../components/svg/Minus'
+import Order from '../order'
 
 export default function CardOrder(props) {
 
+    
     // inspired from https://use-gesture.netlify.app/docs/hooks#start-and-end-handlers + https://use-gesture.netlify.app/docs/state#cancel
     // useGesture handle multiple state
     const [{ x }, set] = useSpring(() => ({ x: 0}))
@@ -15,14 +17,23 @@ export default function CardOrder(props) {
         }),
         onDragEnd: ({movement: [mx]}) => {
             if (mx < 0){
-                console.log ("+1"+props.infoItem.id)
+                Order.push(props.infoItem)
+                console.log(Order)
             } else {
-                console.log ("-1"+props.infoItem.id)
+                // get index of object with id
+                var removeIndex = Order.map(function(item) { return item.id; }).indexOf(props.infoItem.id);
+                // remove object
+                if (removeIndex != -1){
+                    Order.splice(removeIndex, 1);
+                    console.log(Order)
+                }
+                
             }
         }
     })
     
-
+    
+ 
     return (
         <div className="under-card relative">
             <div className="add-order h-full absolute bg-green-500 top-0 right-0 rounded border-2 border-solid border-white"><div className="icon icon-plus absolute right-0 mr-6"><Plus fill="white" width="2rem"/></div></div>
@@ -38,6 +49,7 @@ export default function CardOrder(props) {
                 <div className="dish-desc pr-4 flex-grow">
                     <p className="dish-name text-base font-semibold pb-2">{props.infoItem.nom}</p>
                     <p className="dish-ing text-sm italic text-gray-600">{props.infoItem.ingredients}</p>
+                    <p className="dish-ing text-xs italic text-gray-600">{props.infoItem.info}</p>
                 </div>
                 <div className="dish-price">
                     <span className="price text-base">{props.infoItem.prix}</span><span className="currency">€</span>

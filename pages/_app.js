@@ -10,6 +10,7 @@ function MyApp({ Component, pageProps }) {
 	const categoriesServices = [];
 	const categoriesEvents = [];
 	const infosRestaurant = [];
+	
 
 	function getCategories () {
 		for (let [key, value] of Object.entries(DataJSON)) {
@@ -55,11 +56,13 @@ function MyApp({ Component, pageProps }) {
 				categoriesFoods={categoriesFoods}
 				categoriesServices={categoriesServices}
 				categoriesEvents={categoriesEvents}
-				infosRestaurant={infosRestaurant}/>
+				infosRestaurant={infosRestaurant}
+				/>
 			<TabNav 
 				menuOpen={menuOpen} 
 				tabActive={tabActive} 
-				setTabActive={setTabActive}/>
+				setTabActive={setTabActive}
+				/>
 			<style jsx global>{`
 
 				:root{
