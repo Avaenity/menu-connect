@@ -5,7 +5,7 @@ import CardOrder from '../components/CardOrder'
 import React, { useState } from 'react';
 
 
-export default function IndexPage({ setMenuOpen, menuOpen, categoriesFoods, order, setOrder, searchOpen, setSearchOpen }) {
+export default function IndexPage({ setMenuOpen, menuOpen, categoriesFoods, order, setOrder, searchOpen, setSearchOpen, search }) {
 
 	//Active for NavSlider
 	const [activeItem, setActiveItem] = useState("Formules")
@@ -16,6 +16,11 @@ export default function IndexPage({ setMenuOpen, menuOpen, categoriesFoods, orde
 
 	//Intersection Observer
 	//TODO: Intersection observer for nav slider depending on card-container
+
+	//Filter categoriesFoods by search
+	const [categoriesFoodsFilteredBySearch, setCategoriesFoodsFilteredBySearch] = useState(categoriesFoods)
+
+	
 
 return (
 	<div className="main-content">
@@ -36,7 +41,7 @@ return (
 		</div>
 		<div className="card-container flex flex-col px-8 overflow-scroll pt-6" id="card-container">
 			{
-				categoriesFoods.map(function(el, i) {
+				categoriesFoodsFilteredBySearch.map(function(el, i) {
 					return (
 						<div key={i}>
 							<h2 className="category text-lg font-semibold mb-2 uppercase pt-2" id={Object.keys(el)}>{Object.keys(el)}</h2>

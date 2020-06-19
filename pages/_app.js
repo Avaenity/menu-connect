@@ -78,6 +78,7 @@ function MyApp({ Component, pageProps }) {
 				tipsSentences={tipsSentences}
 				searchOpen={searchOpen}
 				setSearchOpen={setSearchOpen}
+				search={search}
 				/>
 			<TabNav 
 				menuOpen={menuOpen} 
