@@ -15,13 +15,15 @@ export default function CardOrder({infoItem, order, setOrder}) {
             if (mx > 100 || mx < -100) cancel()
             set({ x: down ? mx : 0, immediate: down })
         }),
+        
         onDragEnd: ({movement: [mx]}) => {
-            if (mx < 0){
+            if (mx < -60){
                 addItemToOrder()
-            } else {
+            } else if (mx > 60) {
                 removeItemToOrder()
             }
-        }
+        },
+        
     })
 
     //Check order on load
