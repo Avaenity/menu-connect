@@ -56,12 +56,12 @@ export default function CardOrder({infoItem, order, setOrder}) {
             <animated.div id={infoItem.id} className="card-order p-4 mb-8 rounded shadow-md flex flex-row relative bg-white" {...bind()} style={{ x , touchAction: 'pan-y' }}>
                 { count > 0 ? <QttyBubble Qtty={count}/> : "" }
                 <div className="dish-desc pr-4 flex-grow">
-                    <p className="dish-name text-base font-semibold pb-2">{infoItem.nom}</p>
+                    <p className="dish-name text-base font-semibold py-2">{infoItem.nom}</p>
                     <p className="dish-ing text-sm italic text-gray-600">{infoItem.ingredients}</p>
                     <p className="dish-ing text-xs italic text-gray-600">{infoItem.info}</p>
                 </div>
-                <div className="dish-price">
-                    <span className="price text-base">{infoItem.prix}</span><span className="currency">€</span>
+                <div className="dish-price flex flex-col justify-center">
+                        <p><span className="price text-base">{infoItem.prix}</span><span className="currency">€</span></p>
                 </div>
             </animated.div>
             <style jsx>{`

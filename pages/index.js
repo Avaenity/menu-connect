@@ -20,6 +20,20 @@ export default function IndexPage({ setMenuOpen, menuOpen, categoriesFoods, orde
 	//Filter categoriesFoods by search
 	const [categoriesFoodsFilteredBySearch, setCategoriesFoodsFilteredBySearch] = useState(categoriesFoods)
 
+	const checkIfInputMatches = (input, value) => input.toLowerCase().split(" ").some(o => value.toLowerCase().includes(o))
+	const filterByInput = (data, input) => {
+		let finalResult = [];
+		data.forEach(d => { 
+			let keys = Object.keys(d);
+			let values = Object.values(d);
+			finalResult = [...finalResult, ...values.map((obj, index) => {
+				let result = obj.filter(o => o.ingredients ? checkIfInputMatches(input, o.ingredients) : checkIfInputMatches(input, o.nom))
+				return  {[keys[index]]: result}
+			})]
+		})
+		return finalResult
+	}
+
 	
 
 return (
@@ -41,7 +55,7 @@ return (
 		</div>
 		<div className="card-container flex flex-col px-8 overflow-scroll pt-6" id="card-container">
 			{
-				categoriesFoodsFilteredBySearch.map(function(el, i) {
+				filterByInput(categoriesFoodsFilteredBySearch, search).map(function(el, i) {
 					return (
 						<div key={i}>
 							<h2 className="category text-lg font-semibold mb-2 uppercase pt-2" id={Object.keys(el)}>{Object.keys(el)}</h2>
