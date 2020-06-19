@@ -44,8 +44,11 @@ function MyApp({ Component, pageProps }) {
 	
 
 	const [menuOpen, setMenuOpen] = useState(false);
+	
 	const [tabActive, setTabActive] = useState("home");
 	const [order, setOrder] = useState([]);
+	const [searchOpen, setSearchOpen] = useState(false);
+	const [search, setSearch] = useState("");
 
 
 	return (
@@ -58,6 +61,10 @@ function MyApp({ Component, pageProps }) {
 				categoriesServices={categoriesServices}
 				categoriesEvents={categoriesEvents}
 				infosRestaurant={infosRestaurant}
+				searchOpen={searchOpen}
+				setSearchOpen={setSearchOpen}
+				search={search}
+				setSearch={setSearch}
 			>
 			<Component {...pageProps} 
 				menuOpen={menuOpen} 
@@ -69,6 +76,8 @@ function MyApp({ Component, pageProps }) {
 				order={order}
 				setOrder={setOrder}
 				tipsSentences={tipsSentences}
+				searchOpen={searchOpen}
+				setSearchOpen={setSearchOpen}
 				/>
 			<TabNav 
 				menuOpen={menuOpen} 

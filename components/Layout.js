@@ -10,7 +10,7 @@ export default function Layout(props) {
         
         //overflow hidden on 100vh prevent scrolling
 		<Div100vh className="overflow-hidden">
-            <Nav menuOpen={props.menuOpen} setMenuOpen={props.setMenuOpen}/>
+            <Nav menuOpen={props.menuOpen} setMenuOpen={props.setMenuOpen} searchOpen={props.searchOpen} setSearchOpen={props.setSearchOpen} search={props.search} setSearch={props.setSearch}/>
             <Menu 
                 menuOpen={props.menuOpen}
                 setMenuOpen={props.setMenuOpen}

@@ -5,7 +5,7 @@ import Search from '../components/Search'
 
 
 
-export default function Nav({ menuOpen, setMenuOpen }) {
+export default function Nav({ menuOpen, setMenuOpen, searchOpen, setSearchOpen, search, setSearch }) {
 
   const router = useRouter()
   
@@ -30,7 +30,7 @@ export default function Nav({ menuOpen, setMenuOpen }) {
       <div className="search">
       {
         hasSearch 
-        ? <Search hasWhiteBg={hasWhiteBg}/>
+        ? <Search hasWhiteBg={hasWhiteBg} searchOpen={searchOpen} setSearchOpen={setSearchOpen} search={search} setSearch={setSearch}/>
         : ""
       }
       </div>

@@ -5,7 +5,7 @@ import CardOrder from '../components/CardOrder'
 import React, { useState } from 'react';
 
 
-export default function IndexPage({ setMenuOpen, menuOpen, categoriesFoods, order, setOrder }) {
+export default function IndexPage({ setMenuOpen, menuOpen, categoriesFoods, order, setOrder, searchOpen, setSearchOpen }) {
 
 	//Active for NavSlider
 	const [activeItem, setActiveItem] = useState("Formules")
@@ -20,7 +20,7 @@ export default function IndexPage({ setMenuOpen, menuOpen, categoriesFoods, orde
 return (
 	<div className="main-content">
 		<div className="hero relative">
-			<HomeBanner />
+			<HomeBanner searchOpen={searchOpen} setSearchOpen={setSearchOpen}/>
 			<NavSlider categories={categories} activeItem={activeItem} setActiveItem={setActiveItem}/>
 			<div className="info-bulle flex flex-row mt-4 px-8">
 				<div className="bulle relative pb-8 mr-2">
