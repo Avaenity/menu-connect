@@ -19,25 +19,25 @@ export default function TabNav({ menuOpen, tabActive, setTabActive, order }) {
             <Link href="/welcome">
                 <div className={`svg relative flex flex-col justify-center ${isActive('place') ? "active" : ""}`} data-name="place" onClick={(e) => setTabActive(e.currentTarget.dataset.name)}>
                 {/* TODO find a way to pass data-name in isActive() */}
-                    <div className="svg-container relative">
-                        <Place fill={`${isActive('place') ? "#247BA0" : "#718096"}`} width={`${isActive('place') ? "35px" : "25px"}`}/>
+                    <div className="svg-container relative p-4">
+                        <Place fill={`${isActive('place') ? "#247BA0" : "#718096"}`} width={`${isActive('place') ? "40px" : "30px"}`}/>
                     </div>
                 </div>
             </Link>
             <Link href="/">
                 <div className={`svg relative flex flex-col justify-center ${isActive('home') ? "active" : ""}`} data-name="home" onClick={(e) => setTabActive(e.currentTarget.dataset.name)}>
                 {/* TODO find a way to pass data-name in isActive() */}
-                    <div className="svg-container relative">
-                        <Home fill={`${isActive('home') ? "#247BA0" : "#718096"}`} width={`${isActive('home') ? "35px" : "25px"}`}/>
+                    <div className="svg-container relative p-4">
+                        <Home fill={`${isActive('home') ? "#247BA0" : "#718096"}`} width={`${isActive('home') ? "40px" : "30px"}`}/>
                     </div>
                 </div>
             </Link>
             <Link href="/order">
                 <div className={`svg relative flex flex-col justify-center ${isActive('order') ? "active" : ""}`} data-name="order" onClick={(e) => setTabActive(e.currentTarget.dataset.name)}>
                 {/* TODO find a way to pass data-name in isActive() */}
-                    <div className="svg-container relative">
+                    <div className="svg-container relative p-4">
                         { order.length > 0 ? <QttyBubble Qtty={order.length} size="small" /> : "" }
-                        <Order fill={`${isActive('order') ? "#247BA0" : "#718096"}`} width={`${isActive('order') ? "30px" : "20px"}`}/>
+                        <Order fill={`${isActive('order') ? "#247BA0" : "#718096"}`} width={`${isActive('order') ? "35px" : "25px"}`}/>
                     </div>
                 </div>
             </Link>

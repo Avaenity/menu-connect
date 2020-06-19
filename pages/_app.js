@@ -79,7 +79,7 @@ function MyApp({ Component, pageProps }) {
 			<style jsx global>{`
 
 				:root{
-					--tabnav-height: 4rem;
+					--tabnav-height: 4.5rem;
 				}
 				html {
 					background: linear-gradient(#FFFFFF, #F7F7F7);
