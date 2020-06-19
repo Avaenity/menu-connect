@@ -57,16 +57,16 @@ return (
 			filter: blur(${menuOpen ? "10px" : "0"});
 			}
 			.hero {
-				height: 45%;
+				height: 40%;
 			}
 			.card-container{
-				height: 55%;
+				height: 60%;
 			}
 			.hero::after{
 				content:"";
 				position: absolute;
 				left: 0;
-				bottom: -19px;
+				bottom: -20px;
 				z-index: 30;
 				width: 100%;
 				height: 20px;

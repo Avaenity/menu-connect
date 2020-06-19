@@ -1,6 +1,8 @@
-import Burger from './BurgerAndBack'
-import Search from '../components/svg/Search'
 import { useRouter } from 'next/router'
+
+import Burger from '../components/BurgerAndBack'
+import Search from '../components/Search'
+
 
 
 export default function Nav({ menuOpen, setMenuOpen }) {
@@ -8,13 +10,16 @@ export default function Nav({ menuOpen, setMenuOpen }) {
   const router = useRouter()
   
   //Toggle class to change icon color
-  const pageWhiteBg = ['/[category]', '/events', '/services', '/welcome', '/order']
-  const hasWhiteBg = pageWhiteBg.includes(router.pathname)
+  const pagesWhiteBg = ['/[category]', '/events', '/services', '/welcome', '/order']
+  const hasWhiteBg = pagesWhiteBg.includes(router.pathname)
 
   //Toggle class to change burger to back
-  const pageNeedBack = ['/services/[serviceItem]', '/events/[eventItem]']
-  const hasBack = pageNeedBack.includes(router.pathname)
-  
+  const pagesNeedBack = ['/services/[serviceItem]', '/events/[eventItem]']
+  const hasBack = pagesNeedBack.includes(router.pathname)
+
+  //Toggle class to display search
+  const pagesNeedSearch = ['/']
+  const hasSearch = pagesNeedSearch.includes(router.pathname)
 
   
   
@@ -23,7 +28,11 @@ export default function Nav({ menuOpen, setMenuOpen }) {
     <nav>
       <Burger menuOpen={menuOpen} setMenuOpen={setMenuOpen} isWhite={!hasWhiteBg} needBack={hasBack}/>
       <div className="search">
-      <Search fill={hasWhiteBg ? '#718096' : 'white'}/>
+      {
+        hasSearch 
+        ? <Search hasWhiteBg={hasWhiteBg}/>
+        : ""
+      }
       </div>
       <style jsx>{`
         .search {

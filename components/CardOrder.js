@@ -53,7 +53,7 @@ export default function CardOrder({infoItem, order, setOrder}) {
         <div className="under-card relative">
             <div className="add-order h-full absolute bg-green-500 top-0 right-0 rounded border-2 border-solid border-white"><div className="icon icon-plus absolute right-0 mr-6"><Plus fill="white" width="2rem"/></div></div>
             <div className="remove-order h-full absolute bg-red-500 top-0 left-0 rounded border-2 border-solid border-white"><div className="icon icon-minus absolute left-0 ml-6"><Minus fill="white" width="2rem"/></div></div>
-            <animated.div className="card-order p-4 mb-8 rounded shadow-md flex flex-row relative bg-white" {...bind()} style={{ x , touchAction: 'pan-y' }}>
+            <animated.div id={infoItem.id} className="card-order p-4 mb-8 rounded shadow-md flex flex-row relative bg-white" {...bind()} style={{ x , touchAction: 'pan-y' }}>
                 { count > 0 ? <QttyBubble Qtty={count}/> : "" }
                 <div className="dish-desc pr-4 flex-grow">
                     <p className="dish-name text-base font-semibold pb-2">{infoItem.nom}</p>
