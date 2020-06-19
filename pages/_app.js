@@ -12,10 +12,10 @@ function MyApp({ Component, pageProps }) {
 	const infosRestaurant = [];
 
 	const tipsSentences = [
-		"Si vous achetez deux verres d'Uby n°6, ça ne fait pas un Uby n°12... Mais ça n'en reste pas moins un vin formidable!",
-		"La table d'à côté ne dit que du bien de notre Saumon aux citrons confits!",
-		"La dernière fois qu'on a raté notre Mi-cuit au chocolat, glace au caramel beurre salé, la baguette était à 1Fr!",
-		"Ici c'est satisfait, ou confiné!",
+		"Si vous achetez deux verres d'Uby n°6, ça ne fait pas un Uby n°12... Mais ça n'en reste pas moins un vin formidable !",
+		"La table d'à côté ne dit que du bien de notre Saumon aux citrons confits !",
+		"La dernière fois qu'on a raté notre Mi-cuit au chocolat, glace au caramel beurre salé, la baguette était à 1Fr !",
+		"Ici c'est satisfait, ou confiné !",
 		"Une fois, nous avons dû refuser Michaël Jackson en personne. Salle bondée. Il est repassé au second service...",
 	]
 	

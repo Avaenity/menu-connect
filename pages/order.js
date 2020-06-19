@@ -72,14 +72,14 @@ export default function Order({order, setOrder, tipsSentences}) {
 								<div>
 									<p className="text-base text-center italic text-gray-600 pb-2">Un petit secret :</p>
 									<p className="text-base text-center italic text-gray-600">{RandomTips()}</p>
-									<p className="text-base text-center font-semibold text-gray-600">Mais ça reste entre nous!</p>
+									<p className="text-base text-center font-semibold text-gray-600">Mais ça reste entre nous !</p>
 									<p className="text-base text-center font-semibold text-gray-600">🤫</p>
 								</div>
 							</div>
 							: <div>
 									<h2 className="text-xl font-semibold text-center">Total</h2>
 									<div className="text-center"><span className="price text-3xl font-semibold">{(Math.round(total * 100) / 100).toFixed(2)}</span><sup className="currency text-base font-semibold">€</sup></div>
-									<p className="text-center text-tiny text-gray-600 mt-2 leading-snug"><span className="font-semibold">Gardons le contact</span><br/>Pour passer commande, faites appel à votre serveur!</p>
+									<p className="text-center text-tiny text-gray-600 mt-2 leading-snug"><span className="font-semibold">Gardons le contact</span><br/>Pour passer commande, faites appel à votre serveur !</p>
 							</div>
 						}
 					</div>
