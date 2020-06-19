@@ -1,32 +1,9 @@
-import CardOrderContainer from '../components/CardOrderContainer'
-import { useRouter } from 'next/router'
-
-
-export default function Category (props) {
-    const router = useRouter()
-    const category = router.query["category"]
-
-    //get types
-    const types = []
-    const items = []
-    const getTypes = props.categoriesFoods.map(function(el, index) {
-        if (Object.keys(el) == category){
-            //types
-            let unique = [...new Set(props.categoriesFoods[index][category].map(item => item.type))];
-            for (let i = 0; i < unique.length; i++){
-                types.push(unique[i])
-            }
-        }
-    })
-
-    
-    
-
+export default function MealPage () {
     return (
         <div className="main-content h-full relative">
             <div className="main-container h-full pt-16 px-10">
                 <div className="hero">
-                    <h1 className="text-xl text-center font-sans font-semibold font-thin pb-4 uppercase">{category}</h1>
+                    <h1 className="text-xl text-center font-sans font-semibold font-thin pb-4 uppercase">MEALS</h1>
                     <div className="info-bulle flex flex-row mt-4">
                         <div className="bulle relative mr-2">
                             <div className="w-4 h-4 rounded-full bg-gray-500 text-center relative">
@@ -40,21 +17,6 @@ export default function Category (props) {
                     </div>
                 </div>
                 <div className="category-content mt-4 overflow-scroll">
-
-                    {
-                        <div className="pb-8">
-                            {
-                                types.map(function(el, index) {
-                                    return (
-                                    <div key={index} className="pb-4">
-                                        <h2 className="text-lg font-semibold mb-2 uppercase">{el}</h2>
-                                        <CardOrderContainer order={props.order} setOrder={props.setOrder} types={el} categoriesFoods={props.categoriesFoods}/>
-                                    </div>
-                                )})
-                            }
-                        </div>
-                    }
-
                 </div>
             </div>
             <style jsx>{`

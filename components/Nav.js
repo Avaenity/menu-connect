@@ -10,11 +10,11 @@ export default function Nav({ menuOpen, setMenuOpen, searchOpen, setSearchOpen, 
   const router = useRouter()
   
   //Toggle class to change icon color
-  const pagesWhiteBg = ['/[category]', '/events', '/services', '/welcome', '/order']
+  const pagesWhiteBg = ['/[categories]', '/events', '/services', '/welcome', '/order']
   const hasWhiteBg = pagesWhiteBg.includes(router.pathname)
 
   //Toggle class to change burger to back
-  const pagesNeedBack = ['/services/[serviceItem]', '/events/[eventItem]']
+  const pagesNeedBack = ['/services/[serviceItem]', '/events/[eventItem]', '/meals/[meal]']
   const hasBack = pagesNeedBack.includes(router.pathname)
 
   //Toggle class to display search

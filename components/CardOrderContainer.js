@@ -5,7 +5,7 @@ export default function CardOrderContainer(props) {
 
 
     const router = useRouter()
-    const category = router.query["category"]
+    const category = router.query["categories"]
 
     //get items
     const items = []
