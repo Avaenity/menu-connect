@@ -42,6 +42,7 @@ export default function Search ({ hasWhiteBg, searchOpen, setSearchOpen, search,
                 .search-input{
                     right: 30px;
                     outline:0;
+                    border-radius: 0;
                     color: white;
                     background: transparent;
                     transform: translateY(-4px);
