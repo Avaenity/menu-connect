@@ -1,6 +1,6 @@
 export default function Button () {
     return (
-        <div className="button p-2 mb-8 mt-8 rounded shadow-md relative">
+        <div className="button p-4 mb-8 mt-16 rounded shadow-md relative">
             <p className="text-center text-xs font-semibold uppercase">ajouter à ma commande</p>
             <div className="bulle-container absolute transform translate-x-1/2 -translate-y-1/2">
                 <div className="bulle relative">

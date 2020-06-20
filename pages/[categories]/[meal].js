@@ -1,13 +1,18 @@
 import { useRouter } from 'next/router'
 
+import CardMealOrder from '../../components/CardMealOrder'
+import Button from '../../components/Button'
+
 export default function MealPage (props) {
+    
 
     const router = useRouter()
+    const categories = router.query.categories
   
 
     const infoItem = []
     props.categoriesFoods.map(function (el){
-        if (Object.keys(el).toString() == router.query.categories){
+        if (Object.keys(el).toString() == categories){
             el[router.query.categories].map (function (itm){
                 if (itm.id == router.query.meal){
                     infoItem.push(itm)
@@ -15,9 +20,22 @@ export default function MealPage (props) {
             })
         }
     })
+    
+    //!important! to avoid fail static build, wecheck if router ready
+    //https://flaviocopes.com/nextjs-dynamic-content/
+    //watch https://github.com/vercel/next.js/issues/8259
+    if (!categories) return <p></p>
 
-    //!important! to avoid fail static build
-    if (!infoItem.length) return <p></p>
+    //Get meal composition
+    const mealInfo = Object.keys(infoItem[0])
+    .filter(key => !["info", "id", "nom", "prix"].includes(key))
+    .reduce((obj, key) => {
+        obj[key] = infoItem[0][key];
+        return obj;
+    }, {});
+
+    const mealOrder = []
+    
 
     return (
         <div className="main-content h-full relative">
@@ -36,6 +54,23 @@ export default function MealPage (props) {
                     </div>
                 </div>
                 <div className="category-content mt-4 overflow-scroll">
+                    {
+                        Object.keys(mealInfo).map(function(el,i){
+                            return (
+                                <div key={i}>
+                                    <h2 className="category text-lg font-semibold mb-2 uppercase pt-2">{el}</h2>
+                                    {
+                                        mealInfo[el].split(',').map(function (item,index){
+                                            return (
+                                                <CardMealOrder allFoods={props.allFoods} idItem={item} key={index} categoriesFoods={props.categoriesFoods}/>
+                                            )
+                                        })
+                                    }
+                                </div>
+                            )
+                        })
+                    }
+                <Button />
                 </div>
             </div>
             <style jsx>{`

@@ -9,7 +9,9 @@ export default function EventItem (props) {
             return (el.id == Object.values(router.query)[0])
     })[0];
 
-    //to avoid fail build
+    //!important! to avoid fail static build, wecheck if router ready
+    //https://flaviocopes.com/nextjs-dynamic-content/
+    //watch https://github.com/vercel/next.js/issues/8259
     if (!infoEvent) return <p></p>
 
     return (

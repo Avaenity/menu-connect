@@ -41,6 +41,14 @@ function MyApp({ Component, pageProps }) {
 	};
 	getCategories();
 	
+	const allFoods = []
+    categoriesFoods.forEach(element => {
+        Object.values(element).map(function (el,i){
+            el.forEach(itm => {
+				allFoods.push(itm)
+			});
+        })
+    });
 	
 
 	const [menuOpen, setMenuOpen] = useState(false);
@@ -79,6 +87,7 @@ function MyApp({ Component, pageProps }) {
 				searchOpen={searchOpen}
 				setSearchOpen={setSearchOpen}
 				search={search}
+				allFoods={allFoods}
 				/>
 			<TabNav 
 				menuOpen={menuOpen} 

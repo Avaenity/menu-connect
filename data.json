@@ -15,7 +15,7 @@
             "info": "Sauf samedi et jours fériés",
             "plats": "ent101,ent102,ent103,ent104,ent105",
             "accompagnements": "acc100,acc101,acc102",
-            "fromages": "fro100, fro101",
+            "fromages": "fro100,fro101",
             "prix": 19.5
         },
         {
@@ -25,7 +25,7 @@
             "entrees": "ent101,ent102,ent103,ent104,ent105",
             "plats": "pla100,pla101,pla102,pla103,pla104",
             "accompagnements": "acc100,acc101,acc102",
-            "fromages": "fro100, fro101",
+            "fromages": "fro100,fro101",
             "prix": 35
         }
     ],
@@ -67,7 +67,7 @@
         {
             "id": "ent105",
             "type": "autre",
-            "nom": " Oeufs en cocotte au foie gras poêlé",
+            "nom": "Oeufs en cocotte au foie gras poêlé",
             "ingredients": "Oeufs, Foie gras, Vinaigre de balsamique",
             "prix": 10.5
         }
@@ -126,7 +126,7 @@
             "prix": 4
         },
         {
-            "id": "acc102",
+            "id": "acc104",
             "nom": "Salade verte",
             "prix": 4
         }
