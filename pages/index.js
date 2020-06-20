@@ -77,9 +77,17 @@ return (
 			}
 			.hero {
 				height: 40%;
-			}
+			}		
 			.card-container{
 				height: 60%;
+			}
+			@media (max-width:740px) and (max-height:740px){
+				.hero {
+					height: 45%;
+				}
+				.card-container{
+					height: 55%;
+				}
 			}
 			.hero::after{
 				content:"";

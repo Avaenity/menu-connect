@@ -26,7 +26,7 @@ export default function Category (props) {
         <div className="main-content h-full relative">
             <div className="main-container h-full pt-16 px-10">
                 <div className="hero">
-                    <h1 className="text-xl text-center font-sans font-semibold font-thin pb-4 uppercase">{category}</h1>
+                    <h1 className="text-xl text-center font-sans font-semibold font-thin pb-4 i6:pb-0 uppercase">{category}</h1>
                     <div className="info-bulle flex flex-row mt-4">
                         <div className="bulle relative mr-2">
                             <div className="w-4 h-4 rounded-full bg-gray-500 text-center relative">
@@ -80,6 +80,14 @@ export default function Category (props) {
                     margin: 0 -20px;
                     padding: 20px;
                 }
+                @media (max-width:740px) and (max-height:740px){
+                    .hero {
+                        padding: 10px 20px;
+                    }
+                    .card-container{
+                        padding: 10px 20px;
+                    }
+			    }
                 
             `}</style>
         </div>

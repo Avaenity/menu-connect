@@ -26,6 +26,14 @@ module.exports = {
 				'"Noto Color Emoji"'
 			],
 		},
+		screens: {
+			'i5': {'raw': '(max-height: 570px)'},
+			// => @media iphone5
+			'i6': {'raw': '(max-height: 670px)'},
+			// => @media iphone6/7/8
+			'i6+': {'raw': '(max-height: 740px)'},
+			// => @media iphone6/7/8 plus
+		},
 		extend: {},
 	},
 	variants: {},

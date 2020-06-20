@@ -6,7 +6,7 @@ export default function Welcome() {
 		<div className="main-content h-full relative">
 			<div className="main-container h-full pt-16 px-10">
 				<div className="hero">
-					<img className="logo-banner w-24 mx-auto mb-4" src="/logo.png" />
+					<img className="logo-banner w-24 i6:w-20 mx-auto mb-4" src="/logo.png" />
 				</div>
 				<div className="category-content overflow-scroll">
 					<div className="pb-8">
@@ -42,6 +42,14 @@ export default function Welcome() {
 					height: 80%;
 					margin: 0 -20px;
 					padding: 20px;
+			}
+			@media (max-width:740px) and (max-height:740px){
+				.hero {
+					padding: 10px 20px;
+				}
+				.card-container{
+					padding: 10px 20px;
+				}
 			}
 			`}</style>
 		</div>

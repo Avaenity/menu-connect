@@ -69,6 +69,14 @@ export default function Event(props) {
                     margin: 0 -20px;
                     padding: 20px;
                 }
+				@media (max-width:740px) and (max-height:740px){
+					.hero {
+						padding: 10px 20px;
+					}
+					.card-container{
+						padding: 10px 20px;
+					}
+				}
 			`}</style>
 			</div>
 		)

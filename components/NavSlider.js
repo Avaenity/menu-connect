@@ -5,7 +5,7 @@ export default function NavSlider(props) {
     
     return (
         <nav className="navslider">
-            <div className="nav-container overflow-hidden pt-5 px-8 overflow-scroll relative">
+            <div className="nav-container overflow-hidden pt-5 i6+:pt-3 px-8 overflow-scroll relative">
                 <ul className="flex flew-col">
                     {
                         props.categories.map(function (el,i){
