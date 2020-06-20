@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router'
+import { useState } from 'react';
 
 import CardMealOrder from '../../components/CardMealOrder'
 import Button from '../../components/Button'
@@ -34,7 +35,7 @@ export default function MealPage (props) {
         return obj;
     }, {});
 
-    const mealOrder = []
+    const [mealOrder, setMealOrder] = useState([])
     
 
     return (
@@ -49,7 +50,7 @@ export default function MealPage (props) {
                             </div>
                         </div>
                         <ul>
-                            <li className="text-tiny text-gray-600">Composez votre formule</li>
+                            <li className="text-tiny text-gray-600">Composez votre formule en tappant sur le plat choisi</li>
                         </ul>
                     </div>
                 </div>

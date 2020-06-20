@@ -19,19 +19,13 @@ export default function CardOrder({infoItem, order, setOrder, type}) {
         }),
         
         onDragEnd: ({movement: [mx]}) => {
-            if (type.toString() == "Formules"){
-                if (mx < -60){
-                    Router.push("/[categories]/[meal]", `/${type}/${infoItem.id}`)
-                } else if (mx > 60) {
-                    removeItemToOrder()
-                }
-            } else {
+            
                 if (mx < -60){
                     addItemToOrder()
                 } else if (mx > 60) {
                     removeItemToOrder()
                 }
-            }
+            
         },
         
     })

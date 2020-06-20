@@ -1,4 +1,4 @@
-import { info } from "autoprefixer"
+import { useState } from 'react';
 
 export default function CardMealOrder({ allFoods, idItem }) {
 
@@ -7,10 +7,8 @@ export default function CardMealOrder({ allFoods, idItem }) {
         return itm.id == idItem;
     });
 
-    console.log(infoItem)
-
     return (
-        <div className="relative">
+        <div className="relative" onClick={() => console.log(infoItem[0].nom)}>
             <div className="card-order p-4 mb-8 rounded shadow-md flex flex-row relative bg-white">
                 <div className="dish-desc pr-4 flex-grow">
                     <p className="dish-name text-base font-semibold py-2">{infoItem[0].nom}</p>
