@@ -61,7 +61,7 @@ return (
 							<h2 className="category text-lg font-semibold mb-2 uppercase pt-2" id={Object.keys(el)}>{Object.keys(el)}</h2>
 							{
 								el[Object.keys(el)].map (function(itm,index){
-									return <CardOrder order={order} setOrder={setOrder} key={index} infoItem={itm}/>
+									return <CardOrder type={Object.keys(el)} order={order} setOrder={setOrder} key={index} infoItem={itm}/>
 								})
 							}
 						</div>

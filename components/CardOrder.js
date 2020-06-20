@@ -1,10 +1,12 @@
+import Router from 'next/router'
+
 import { useSpring, animated } from 'react-spring'
 import { useGesture } from 'react-use-gesture'
 import Plus from '../components/svg/Plus'
 import Minus from '../components/svg/Minus'
 import QttyBubble from '../components/QttyBulle'
 
-export default function CardOrder({infoItem, order, setOrder}) {
+export default function CardOrder({infoItem, order, setOrder, type}) {
 
     
     // inspired from https://use-gesture.netlify.app/docs/hooks#start-and-end-handlers + https://use-gesture.netlify.app/docs/state#cancel
@@ -17,10 +19,14 @@ export default function CardOrder({infoItem, order, setOrder}) {
         }),
         
         onDragEnd: ({movement: [mx]}) => {
-            if (mx < -60){
-                addItemToOrder()
-            } else if (mx > 60) {
-                removeItemToOrder()
+            if (type.toString() == "Formules"){
+                Router.push("/[categories]/[meal]", `/${type}/${infoItem.id}`)
+            } else {
+                if (mx < -60){
+                    addItemToOrder()
+                } else if (mx > 60) {
+                    removeItemToOrder()
+                }
             }
         },
         
