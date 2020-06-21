@@ -1,11 +1,12 @@
 import { useRouter } from 'next/router'
-import { useState } from 'react';
+import { useState } from "react";
 
 import CardMealOrder from '../../components/CardMealOrder'
 import Button from '../../components/Button'
 
 export default function MealPage (props) {
     
+    const [choices, setChoices] = useState([]);
 
     const router = useRouter()
     const categories = router.query.categories
@@ -35,8 +36,12 @@ export default function MealPage (props) {
         return obj;
     }, {});
 
-    const [mealOrder, setMealOrder] = useState([])
+    //Get choices
+    function onChange(clickedItem, clickedCategory) {
+        console.log(clickedItem, clickedCategory)
     
+        
+    }
 
     return (
         <div className="main-content h-full relative">
@@ -55,6 +60,7 @@ export default function MealPage (props) {
                     </div>
                 </div>
                 <div className="category-content mt-4 overflow-scroll">
+                    <form>
                     {
                         Object.keys(mealInfo).map(function(el,i){
                             return (
@@ -62,8 +68,13 @@ export default function MealPage (props) {
                                     <h2 className="category text-lg font-semibold mb-2 uppercase pt-2">{el}</h2>
                                     {
                                         mealInfo[el].split(',').map(function (item,index){
+                                            //Get infoItem by ID
+                                            const infoItem = props.allFoods.filter(function(itm){
+                                                return itm.id == item;
+                                            });
+
                                             return (
-                                                <CardMealOrder allFoods={props.allFoods} idItem={item} key={index} categoriesFoods={props.categoriesFoods}/>
+                                                <CardMealOrder name={el} key={index} infoItem={infoItem} onChange={() => onChange(infoItem[0].id, el)}/>
                                             )
                                         })
                                     }
@@ -71,6 +82,7 @@ export default function MealPage (props) {
                             )
                         })
                     }
+                    </form>
                 <Button />
                 </div>
             </div>
