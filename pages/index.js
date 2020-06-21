@@ -37,7 +37,7 @@ export default function IndexPage({ setMenuOpen, menuOpen, categoriesFoods, orde
 	
 
 return (
-	<div className="main-content">
+	<div className="main-content hidden" id="index-content">
 		<div className="hero relative">
 			<HomeBanner searchOpen={searchOpen} setSearchOpen={setSearchOpen}/>
 			<NavSlider categories={categories} activeItem={activeItem} setActiveItem={setActiveItem}/>

@@ -1,6 +1,6 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 
-import { useChain, useSpring, animated} from 'react-spring'
+import { useSpring, animated} from 'react-spring'
 
 import '../styles/index.css'
 import Layout from '../components/Layout'
@@ -81,6 +81,8 @@ function MyApp({ Component, pageProps }) {
 	useEffect(() => {
 		setTimeout(function(){document.getElementById("splash-screen").style.transform = "translateX(-100%)"; }, 4000);
 		setTimeout(function(){ document.getElementById("splash-screen").parentNode.removeChild(document.getElementById("splash-screen")) }, 5000);
+		setTimeout(function(){ document.getElementById("index-content").classList.remove("hidden") }, 1500);
+		setTimeout(function(){ document.getElementById("tabnav-content").classList.remove("hidden") }, 1500);
 		
 	}, []);
 
@@ -150,7 +152,7 @@ function MyApp({ Component, pageProps }) {
 				.logo-sc{
 					position: absolute;
 					z-index: 10;
-					top: 30%;
+					top: 28%;
 					left: 50%;
 					transform: translateX(-50%);
 				}
