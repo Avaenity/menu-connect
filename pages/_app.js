@@ -1,8 +1,12 @@
+import { useState, useEffect, useRef } from 'react'
+
+import { useChain, useSpring, animated} from 'react-spring'
+
 import '../styles/index.css'
 import Layout from '../components/Layout'
-import { useState } from 'react'
 import DataJSON from '../data.json';
 import TabNav from '../components/TabNav'
+import MenuConnect from '../components/svg/MenuConnect'
 
 function MyApp({ Component, pageProps }) {
 
@@ -58,6 +62,28 @@ function MyApp({ Component, pageProps }) {
 	const [searchOpen, setSearchOpen] = useState(false);
 	const [search, setSearch] = useState("");
 
+	//Animation
+	const logoReveal = useSpring({
+		from: { opacity: 0, width:"10rem" },
+		to: async next => {
+				await next({ opacity: 1, width:"10rem", config: { duration: 2000 } })
+				await next({ opacity: 0, width:"20rem", config: { duration: 400 }, delay: 1000})
+		}
+	})
+	const textReveal = useSpring({
+		from: { opacity: 0 },
+		to: async next => {
+				await next({ opacity: 1, config: { duration: 1000 }, delay: 1000})
+				await next({ opacity: 0, config: { duration: 400 }, delay: 1000})
+		}
+	})
+
+	useEffect(() => {
+		setTimeout(function(){document.getElementById("splash-screen").style.transform = "translateX(-100%)"; }, 4000);
+		setTimeout(function(){ document.getElementById("splash-screen").parentNode.removeChild(document.getElementById("splash-screen")) }, 5000);
+		
+	}, []);
+
 
 	return (
 			<Layout
@@ -74,6 +100,11 @@ function MyApp({ Component, pageProps }) {
 				search={search}
 				setSearch={setSearch}
 			>
+			<div id="splash-screen" className="splash-screen absolute top-0 left-0 w-full h-full bg-white z-30 flex flex-col justify-center">
+				<animated.img className="logo-sc w-40 i6:w-32 opacity-100" src="/logo.png" style={logoReveal} />
+				<animated.p className="text-sc text-2xl text-center font-semibold uppercase" style={textReveal}>Le palais des délices</animated.p>
+				<MenuConnect width="4rem" className="logo-mc"/>
+			</div>
 			<Component {...pageProps} 
 				menuOpen={menuOpen} 
 				setMenuOpen={setMenuOpen} 
@@ -112,6 +143,29 @@ function MyApp({ Component, pageProps }) {
 					overflow: hidden;
 					transition: filter 0.5s ease-in-out;
 					filter: blur(${menuOpen ? "10px" : "0"});
+				}
+				#splash-screen{
+					transition: all 1s ease-in-out;
+				}
+				.logo-sc{
+					position: absolute;
+					z-index: 10;
+					top: 30%;
+					left: 50%;
+					transform: translateX(-50%);
+				}
+				.text-sc{
+					position: absolute;
+					bottom: 45%;
+					width: 100%;
+					left: 50%;
+					transform: translateX(-50%);
+				}
+				.logo-mc{
+					position: absolute;
+					bottom: 15px;
+					left: 50%;
+					transform: translateX(-50%);
 				}
 			`}</style>
 			</Layout>
