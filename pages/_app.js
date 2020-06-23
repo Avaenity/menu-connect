@@ -85,6 +85,12 @@ function MyApp({ Component, pageProps }) {
 
 
 	return (
+		<>
+			<div id="splash-screen" className="splash-screen absolute top-0 left-0 w-full h-full bg-white z-30 flex flex-col justify-center">
+				<animated.img className="logo-sc w-40 i6:w-32 opacity-100" src="/logo.png" style={logoReveal} />
+				<animated.p className="text-sc text-2xl text-center font-semibold uppercase" style={textReveal}>Le palais des délices</animated.p>
+				<MenuConnect width="4rem" className="logo-mc"/>
+			</div>
 			<Layout
 				menuOpen={menuOpen}
 				setMenuOpen={setMenuOpen}
@@ -99,11 +105,6 @@ function MyApp({ Component, pageProps }) {
 				search={search}
 				setSearch={setSearch}
 			>
-			<div id="splash-screen" className="splash-screen absolute top-0 left-0 w-full h-full bg-white z-30 flex flex-col justify-center">
-				<animated.img className="logo-sc w-40 i6:w-32 opacity-100" src="/logo.png" style={logoReveal} />
-				<animated.p className="text-sc text-2xl text-center font-semibold uppercase" style={textReveal}>Le palais des délices</animated.p>
-				<MenuConnect width="4rem" className="logo-mc"/>
-			</div>
 			<Component {...pageProps} 
 				menuOpen={menuOpen} 
 				setMenuOpen={setMenuOpen} 
@@ -168,6 +169,7 @@ function MyApp({ Component, pageProps }) {
 				}
 			`}</style>
 			</Layout>
+		</>
 	)
 }
 
