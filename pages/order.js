@@ -112,9 +112,6 @@ export default function Order({order, setOrder, tipsSentences}) {
                     .hero {
                         padding: 10px 20px;
                     }
-                    .order-content{
-                        padding: 10px 20px;
-                    }
 			    }
 			`}</style>
 		</div>
