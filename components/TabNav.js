@@ -1,4 +1,3 @@
-import { string,bool,func } from 'prop-types';
 
 import Link from 'next/link'
 import Place from '../components/svg/Place'
@@ -15,7 +14,7 @@ export default function TabNav({ menuOpen, tabActive, setTabActive, order }) {
     
     
     return (
-        <div className="tabnav w-full fixed bottom-0 flex flex-row justify-around bg-white hidden" id="tabnav-content">
+        <div className="tabnav w-full fixed bottom-0 flex flex-row justify-around bg-white" id="tabnav-content">
             <Link href="/welcome">
                 <div className={`svg relative flex flex-col justify-center ${isActive('place') ? "active" : ""}`} data-name="place" onClick={(e) => setTabActive(e.currentTarget.dataset.name)}>
                 {/* TODO find a way to pass data-name in isActive() */}

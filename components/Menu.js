@@ -12,7 +12,7 @@ const Menu = (props) => {
         <div className="menu flex relative overflow-scroll"  open={props.menuOpen}>
             <div className="close" open={props.menuOpen} onClick={() => props.setMenuOpen(!props.menuOpen)}></div>
             <div className="flex flex-col flex-1">
-                <div className="menu-container flex flex-col justify-center flex-grow pl-8">
+                <div className="menu-container flex flex-col justify-center flex-grow pl-8 pr-16">
                     {
                         <ul className="categories mb-10 relative">
                             {props.categoriesFoods.map((e, index) => (
