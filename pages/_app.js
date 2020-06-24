@@ -80,7 +80,7 @@ function MyApp({ Component, pageProps }) {
 
 	useEffect(() => {
 		setTimeout(function(){document.getElementById("splash-screen").style.transform = "translateX(-100%)"; }, 4000);
-		setTimeout(function(){ document.getElementById("splash-screen").parentNode.removeChild(document.getElementById("splash-screen")) }, 5000);
+		setTimeout(function(){ document.getElementById("splash-screen").classList.add("hidden")}, 5000);
 	}, []);
 
 
