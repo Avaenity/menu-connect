@@ -145,7 +145,7 @@ function MyApp({ Component, pageProps }) {
 					filter: blur(${menuOpen ? "10px" : "0"});
 				}
 				#splash-screen{
-					transition: all 1s ease-in-out;
+					transition: transform 1s ease-in-out;
 				}
 				.logo-sc{
 					position: absolute;
