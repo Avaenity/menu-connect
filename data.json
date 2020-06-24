@@ -545,21 +545,21 @@
         {
             "id": "eve100",
             "date": "2020-07-10T22:00:00.000Z",
-            "nom": "Atellier cuisine : Salades en folie",
+            "nom": "Atelier cuisine : Salades en folie",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ornare ac purus id varius. Suspendisse aliquam mi vel est tincidunt, vel cursus quam dapibus. Maecenas lectus neque, posuere vel elit nec, iaculis gravida orci. Sed dapibus arcu ipsum, sit amet mattis sapien consectetur sit amet. Nullam nec quam quis erat dignissim rutrum quis sit amet elit. Suspendisse molestie dui in justo elementum tristique et ac quam. In sed malesuada lorem. Sed pellentesque metus vel magna vestibulum, in sagittis mi condimentum.",
             "image": "event1.jpg"
         },
         {
             "id": "eve101",
             "date": "2020-07-16T22:00:00.000Z",
-            "nom": "Atellier cuisine : Atelier burger",
+            "nom": "Atelier cuisine : Atelier burger",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ornare ac purus id varius. Suspendisse aliquam mi vel est tincidunt, vel cursus quam dapibus. Maecenas lectus neque, posuere vel elit nec, iaculis gravida orci. Sed dapibus arcu ipsum, sit amet mattis sapien consectetur sit amet. Nullam nec quam quis erat dignissim rutrum quis sit amet elit. Suspendisse molestie dui in justo elementum tristique et ac quam. In sed malesuada lorem. Sed pellentesque metus vel magna vestibulum, in sagittis mi condimentum.",
             "image": "event2.jpg"
         },
         {
             "id": "eve102",
             "date": "2020-07-21T22:00:00.000Z",
-            "nom": "Atellier cuisine : Les enfants en cuisine",
+            "nom": "Atelier cuisine : Les enfants en cuisine",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ornare ac purus id varius. Suspendisse aliquam mi vel est tincidunt, vel cursus quam dapibus. Maecenas lectus neque, posuere vel elit nec, iaculis gravida orci. Sed dapibus arcu ipsum, sit amet mattis sapien consectetur sit amet. Nullam nec quam quis erat dignissim rutrum quis sit amet elit. Suspendisse molestie dui in justo elementum tristique et ac quam. In sed malesuada lorem. Sed pellentesque metus vel magna vestibulum, in sagittis mi condimentum.",
             "image": "event3.jpg"
         },
