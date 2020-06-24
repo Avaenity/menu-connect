@@ -150,13 +150,13 @@ function MyApp({ Component, pageProps }) {
 				.logo-sc{
 					position: absolute;
 					z-index: 10;
-					top: 28%;
+					top: 26%;
 					left: 50%;
 					transform: translateX(-50%);
 				}
 				.text-sc{
 					position: absolute;
-					bottom: 45%;
+					bottom: 40%;
 					width: 100%;
 					left: 50%;
 					transform: translateX(-50%);
